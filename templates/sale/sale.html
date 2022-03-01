@@ -1,0 +1,161 @@
+{% extends '../flash_base.html' %}
+
+{% load static %}
+
+{% block title %}
+Flash Sale
+{% endblock title %}
+
+{% block custom_css %}
+<link rel="stylesheet" href="{% static 'css/sale/sale.css' %}">
+{% endblock custom_css %}
+
+{% block main_content %}
+<div class="sale-section">
+    <div class="content">
+        <div class="timer">
+            <div class="wrap">  
+                <div class="title">Hurry Up!</div>
+                <div class="countdown">
+                    <div class="bloc-time days" data-init-value="2">
+                        <span class="count-title">Days</span>
+                        <div class="figure days days-1">
+                            <span class="top">0</span>
+                            <span class="top-back">
+                                <span>0</span>
+                            </span>
+                            <span class="bottom">0</span>
+                            <span class="bottom-back">
+                            <span>0</span>
+                            </span>
+                        </div>
+                        <div class="figure days days-2">
+                            <span class="top">2</span>
+                            <span class="top-back">
+                            <span>2</span>
+                            </span>
+                            <span class="bottom">2</span>
+                            <span class="bottom-back">
+                            <span>2</span>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="bloc-time hours" data-init-value="0">
+                        <span class="count-title">Hours</span>
+                        <div class="figure hours hours-1">
+                            <span class="top">0</span>
+                            <span class="top-back">
+                                <span>0</span>
+                            </span>
+                            <span class="bottom">0</span>
+                            <span class="bottom-back">
+                            <span>0</span>
+                            </span>
+                        </div>
+                        <div class="figure hours hours-2">
+                            <span class="top">0</span>
+                            <span class="top-back">
+                            <span>0</span>
+                            </span>
+                            <span class="bottom">0</span>
+                            <span class="bottom-back">
+                            <span>0</span>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="bloc-time min" data-init-value="0">
+                        <span class="count-title">Minutes</span>
+
+                        <div class="figure min min-1">
+                            <span class="top">0</span>
+                            <span class="top-back">
+                            <span>0</span>
+                            </span>
+                            <span class="bottom">0</span>
+                            <span class="bottom-back">
+                                <span>0</span>
+                            </span>        
+                        </div>
+
+                        <div class="figure min min-2">
+                        <span class="top">0</span>
+                            <span class="top-back">
+                            <span>0</span>
+                            </span>
+                            <span class="bottom">0</span>
+                            <span class="bottom-back">
+                            <span>0</span>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="bloc-time sec" data-init-value="0">
+                        <span class="count-title">Seconds</span>
+
+                            <div class="figure sec sec-1">
+                            <span class="top">0</span>
+                            <span class="top-back">
+                            <span>0</span>
+                            </span>
+                            <span class="bottom">0</span>
+                            <span class="bottom-back">
+                            <span>0</span>
+                            </span>          
+                        </div>
+
+                        <div class="figure sec sec-2">
+                            <span class="top">0</span>
+                            <span class="top-back">
+                            <span>0</span>
+                            </span>
+                            <span class="bottom">0</span>
+                            <span class="bottom-back">
+                            <span>0</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main-arena">
+            <div class="info-section">
+                <div class="title">Flash Sale</div>
+                <div class="description">Take advantage of this sale and get all the benefits of miBiome NGS services!</div>
+                <div class="info-row">
+                    <div class="heading">Name: </div>
+                    <div class="desc">{% lorem 5 w %}</div>
+                </div>
+                <div class="info-row">
+                    <div class="heading">Description: </div>
+                    <div class="desc">{% lorem 50 w %}</div>
+                </div>
+                <div class="info-row">
+                    <div class="heading">Minimum Price: </div>
+                    <div class="desc">₹ 15,000</div>
+                </div>
+            </div>
+            <div class="form-section">
+                <form id="sale-form">
+                    <div class="title">Apply here</div>
+                    {% csrf_token %}
+                    <div class="input-block">
+                        <input type="text" id="title" name="title" required pattern="[A-Za-z ]+" title="Only alphabets allowed" maxlength="500">
+                        <span class="placeholder">Quote Price</span>
+                    </div>
+                    <div class="input-block">
+                        <input type="text" id="title" name="title" required pattern="[A-Za-z ]+" title="Only alphabets allowed" maxlength="500">
+                        <span class="placeholder">Slots</span>
+                    </div>
+                    <button class="primary-button">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock main_content %}
+
+{% block custom_script %}
+<script src="{% static 'js/sale/sale.js' %}"></script>
+{% endblock custom_script %}

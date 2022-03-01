@@ -1,0 +1,78 @@
+.grant-section {
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
+}
+
+.grant-section h2 {
+    font-size: 2.5rem;
+    color: #000;
+    text-align: center;
+    font-weight: 700;
+    font-family: Poppins;
+}
+
+.grant-section h2:after {
+    display: block;
+    height: 0.13rem;
+    background-color: #3498db;
+    content: " ";
+    width: 12.5rem;
+    margin: 0 auto;
+    margin-top: 1.25rem;
+    margin-bottom: 0.63rem;
+}
+
+.grant-img {
+    margin-top: 1.88rem;
+    margin-left: 25rem;
+}
+
+.grant-img img {
+    height: 28.13rem; 
+    width: 28.13rem;
+}
+
+
+.grant-section .grant {
+    height: 100%;
+    margin-top: 1.88rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.grant-section .grant-1 {
+    width: 20rem;
+    background-color: #fff;
+    padding: 0.94rem;
+    margin: 2.19rem;
+    border-radius: 0.63rem;
+    box-shadow: 0 0 1.88rem 0.06rem rgba(0, 0, 0, 0.1);
+}
+
+.grant-section .grant-1 img {
+    height: 6.25rem;
+    width: 6.25rem;
+    margin-left: 6.25rem;
+
+}
+
+.grant-section .description {
+    padding-bottom: 1.88rem;
+    text-align: center;
+    margin-top: 1.88rem;
+}
+
+.grant-section .grant h2 {
+    font-family: TTCommons;
+    font-weight: 500;
+    font-size: 3.13rem;
+}
+
+.grant-section .grant p {
+    color: #000;
+    font-family: TTCommons;
+    font-weight: 300;
+    font-size: 1.25rem;
+}
+

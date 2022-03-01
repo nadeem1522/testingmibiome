@@ -1,0 +1,85 @@
+.team-wrapper {
+    width: 75%;
+    margin: auto;
+    padding: 2rem 0rem;
+}
+
+.team-wrapper .page-heading {
+    font-size: 3rem;
+    font-weight: 300;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 1rem;
+}
+
+.team-wrapper .content .member-section {
+    padding: 2rem 0rem;
+    display: flex;
+    flex-direction: row;
+}
+
+.team-wrapper .content .reverse {
+    flex-direction: row-reverse;
+}
+
+.team-wrapper .content .member-section img {
+    width: 20rem;
+    height: 20rem;
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: 0px 0px 55px 5px rgba(0, 0, 0, 0.06);
+    transition: 0.3s;
+}
+
+.team-wrapper .content .member-section img:hover {
+    box-shadow: 0px 0px 55px 5px rgba(0, 0, 0, 0.1);
+}
+
+.team-wrapper .content .member-section .message-section {
+    margin: 0rem 2rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.team-wrapper .content .member-section .message-section .name {
+    color: #0648d4;
+    font-size: 2rem;
+    font-weight: 300;
+    padding-bottom: 0.5rem;
+}
+
+.team-wrapper .content .member-section .message-section .title {
+    color: black;
+    font-size: 1.5rem;
+    font-weight: 300;
+    padding-bottom: 1rem;
+}
+
+.team-wrapper .content .member-section .message-section .description {
+    color: #999999;
+    font-size: 1.2rem;
+    font-weight: 300;
+    padding-bottom: 0.5rem;
+    width: 100%;
+    display: flex;
+    justify-content: left;
+}
+
+@media screen and (max-width: 1024px) {
+  .team-wrapper .content .member-section {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .team-wrapper .content .member-section img {
+    height: auto;
+    width: 90%;
+  }
+
+  .team-wrapper .content .member-section .message-section {
+    width: 90%;
+    margin: 2rem 0rem 0rem 0rem;
+  }
+}

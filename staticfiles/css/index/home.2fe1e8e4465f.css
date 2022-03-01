@@ -1,0 +1,229 @@
+.home-wrapper, #home-carousel .carousel-inner {
+    height: 100%;
+}
+
+#home-carousel {
+    height: 80%;
+    margin-bottom: 4rem;
+}
+
+#home-carousel .carousel-inner .carousel-item {
+    height: 100%;
+}
+
+#home-carousel .carousel-inner .carousel-item .slide {
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+#home-carousel .carousel-inner .carousel-item #slide1 {
+    background-image: url("/static/images/Slide1.6bc2cb7f6462.jpg");
+}
+
+#home-carousel .carousel-inner .carousel-item #slide2 {
+    background-image: url("/static/images/Slide2.94a392840f31.jpg");
+}
+
+#home-carousel .carousel-inner .carousel-item #slide3 {
+    background-image: url("/static/images/Slide3.32b9e08b07fb.jpg");
+}
+
+#home-carousel .carousel-inner .carousel-item #slide4 {
+    background-image: url("/static/images/Slide4.52a67421d553.jpg");
+}
+
+.page-heading {
+    font-size: 3rem;
+    font-weight: 300;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+#about-section {
+    width: 80%;
+    margin: auto;
+    padding-bottom: 4rem;
+    padding-top: 4rem;
+}
+
+#about-section .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#about-section .content .description {
+    display: flex;
+    justify-content: center;
+    color: #999999;
+    font-size: 1.5rem;
+    font-weight: 300;
+    padding-bottom: 2rem;
+}
+
+#services-section {
+    width: 80%;
+    margin: auto;
+    padding-bottom: 4rem;
+}
+
+#services-section .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#services-section .content .row {
+    width: 100%;
+}
+
+#services-section .content .service-card {
+    display: flex;
+    justify-content: center;
+    border: 1px solid #0648d4;
+    border-radius: 5px;
+    padding: 0.7rem;
+    margin-bottom: 2rem;
+}
+
+#services-section .content .service-card .title {
+    color: #0648d4;
+    font-weight: 300;
+}
+
+#stats-section {
+    width: 80%;
+    margin: auto;
+    padding-bottom: 4rem;
+}
+
+#stats-section .title {
+    font-size: 2rem;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+}
+
+#stats-section .col-lg-3 {
+    margin-bottom: 2rem;
+}
+
+#stats-section .stats-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #0648d4;
+    height: 100%;
+    padding: 0.5rem;
+}
+
+#stats-section .stats-card .value {
+    font-size: 4rem;
+}
+
+#stats-section .stats-card .unit {
+    font-size: 1.5rem;
+}
+
+#stats-section .stats-card .title {
+    color: #999999;
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+#feedback-section {
+    width: 80%;
+    margin: auto;
+    padding-bottom: 4rem;
+}
+
+#feedback-section .content .feedback-card {
+    padding-bottom: 2rem;
+}
+
+#feedback-section .content .feedback-card i {
+    color: #999999;
+    padding-bottom: 0.5rem;
+}
+
+#feedback-section .content .feedback-card .comment {
+    font-size: 1.1rem;
+    font-weight: 300;
+    padding-bottom: 1rem;
+}
+
+#feedback-section .content .feedback-card .name {
+    font-size: 1.4rem;
+    font-weight: 700;
+    padding-bottom: 0.2rem;
+}
+
+#feedback-section .content .feedback-card .title {
+    color: #999999;
+    font-size: 1.4rem;
+    font-weight: 300;
+    padding-bottom: 0.2rem;
+}
+
+#contact-section {
+    width: 80%;
+    margin: auto;
+    padding-bottom: 4rem;
+}
+
+#contact-section .content {
+    display: flex;
+    flex-direction: row;
+}
+
+#contact-section .content .details {
+    width: 50%;
+}
+
+#contact-section .content .details .title {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+#contact-section .content .details .desc {
+    font-weight: 300;
+    padding-bottom: 2rem;
+}
+
+#contact-section .content .details .desc a {
+    color: #0648d4;
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+
+#contact-section .content .details .social-plugins a {
+    margin-right: 1.5rem;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+#contact-section .content .map-wrapper {
+    width: 50%;
+}
+
+@media screen and (max-width: 576px) {
+    #contact-section .content {
+        flex-direction: column;
+    }
+
+    #contact-section .content .details {
+        width: 100%;
+        padding-bottom: 2rem;
+    }
+
+    #contact-section .content .map-wrapper {
+        width: 100%;
+    }
+
+    #home-carousel {
+        height: 50%;
+    }
+}

@@ -1,0 +1,130 @@
+#what-we-do {
+    margin-top: 1.25rem;
+}
+
+#what-we-do .section-title h2 {
+    font-size: 2.5rem;
+    color: #000;
+    text-align: center;
+    font-weight: 700;
+    font-family: Poppins;
+}
+
+#what-we-do .section-title h2:after {
+    display: block;
+    height: 0.13rem;
+    background-color: #3498db;
+    content: " ";
+    width: 12.5rem;
+    margin: 0 auto;
+    margin-top: 1.25rem;
+    margin-bottom: 2.5rem;
+    
+}
+.accordion-button {
+    font-family: TTCommons;
+    font-weight: 300;
+    font-style: bold;
+    font-size: 1.63rem;
+}
+
+.accordion-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.accordion-body p {
+    font-family: TTCommons;
+    font-weight: 300;
+    font-size: 1.25rem;
+    text-align: center;
+    color: #000;
+}
+
+.accordion-body img {
+    height: 4.38rem;
+    width: 4.38rem;
+    margin-bottom: 0.94rem;
+}
+
+.technology-wrapper {
+    padding: 4rem 0rem;
+    margin: auto;
+    width: 80%;
+}
+
+.technology-wrapper h2 {
+    font-size: 2.5rem;
+    color: #000;
+    text-align: center;
+    font-weight: 700;
+    font-family: Poppins;
+}
+
+.technology-wrapper h2:after {
+    display: block;
+    height: 0.13rem;
+    background-color: #3498db;
+    content: " ";
+    width: 12.5rem;
+    margin: 0 auto;
+    margin-top: 1.25rem;
+    margin-bottom: 2.5rem;
+}
+
+.technology-wrapper .content .tech-row {
+    display: flex;
+    padding-bottom: 2rem;
+}
+
+.technology-wrapper .content .reverse {
+    flex-direction: row-reverse;
+}
+
+.technology-wrapper .content .tech-row .image-wrapper {
+    width: 50%;
+}
+
+.technology-wrapper .content .tech-row .image-wrapper img {
+    width: 100%;
+}
+
+.technology-wrapper .content .tech-row .information {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.technology-wrapper .content .tech-row .information .title {
+    font-size: 2rem;
+    font-weight: 600;
+    padding-bottom: 1rem;
+    font-family: TTCommons;
+    border-bottom: 2px solid #3498db;
+}
+
+.technology-wrapper .content .tech-row .information .description {
+    font-family: TTCommons;
+    color: #000;
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin-top: 0.94rem;
+}
+
+@media screen and (max-width: 768px) {
+    .technology-wrapper .content .tech-row {
+        flex-direction: column;
+    }
+
+    .technology-wrapper .content .tech-row .image-wrapper {
+        width: 100%;
+        padding-bottom: 1rem;
+    }
+
+    .technology-wrapper .content .tech-row .information {
+        width: 100%;
+    }
+}

@@ -1,0 +1,40 @@
+.coevidd-wrapper {
+    width: 75%;
+    margin: auto;
+    padding: 2rem 0rem;
+}
+
+.coevidd-wrapper .page-heading {
+    font-size: 3rem;
+    font-weight: 300;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
+.coevidd-wrapper .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.coevidd-wrapper .content .row {
+    width: 100%;
+}
+
+.coevidd-wrapper .content .service-card {
+    display: flex;
+    justify-content: center;
+    border: 1px solid #0648d4;
+    border-radius: 5px;
+    padding: 0.7rem;
+    margin-bottom: 2rem;
+    transition: 0.7s;
+}
+
+.coevidd-wrapper .content .service-card .title {
+    color: #0648d4;
+    font-weight: 300;
+    transition: 0.7s;
+}

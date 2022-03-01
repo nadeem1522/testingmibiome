@@ -1,0 +1,78 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K1ZS5MMHYH"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-K1ZS5MMHYH');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {% block title %}
+        miBiome Therapeutics
+        {% endblock title %}
+    </title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'vendor/bootstrap-5.0.0-beta2/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'vendor/fontawesome-5.15.2/css/all.css' %}">
+    <link rel="shortcut icon" href="{% static 'images/logo.ico' %}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'css/flash_base.css' %}">
+    {% block custom_css %}{% endblock custom_css %}
+</head>
+<body>
+    <div class="page-wrapper">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="{% url 'home' %}">
+                    <img src="{% static 'images/logo.png' %}" alt="miBiome Therapeutics" width="80">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        {% if user.is_authenticated %}
+                        <div class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="profile-link" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                {{user.email}}
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profile-link">
+                                <li><a class="dropdown-item nav-dropdown-item" href="{% url 'user:profile' request.user.pk %}">My Profile</a></li>
+                                <li><a class="dropdown-item nav-dropdown-item" href="{% url 'user:logout' %}">Logout</a></li>
+                            </ul>
+                        </div>
+                        {% else %}
+                        <li class="nav-item">
+                            <a class="nav-link {% if request.path == '/user/login/' %}active{% endif %}" href="{% url 'user:login' %}">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link {% if request.path == '/user/signup/' %}active{% endif %}" href="{% url 'user:signup' %}">Sign Up</a>
+                        </li>
+                        {% endif %}
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="main-wrapper">
+            <div class="background">
+                <img id="helix-gradient" src="{% static 'images/helix_gradient.svg' %}" alt="Helix Gradient">
+                <img id="helix-primary" src="{% static 'images/helix_primary.svg' %}" alt="Helix Primary">
+            </div>
+            {% block main_content %}
+            {% endblock main_content %}
+        </div>
+    </div>
+    <script src="{% static 'vendor/jquery-3.6.0.min.js' %}"></script>
+    <script src="{% static 'vendor/bootstrap-5.0.0-beta2/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+    <script src="{% static 'js/flash_base.js' %}"></script>
+    {% block custom_script %}{% endblock custom_script %}
+</body>
+</html>

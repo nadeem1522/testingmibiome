@@ -1,0 +1,299 @@
+.home-wrapper, #home-carousel .carousel-inner {
+    height: 100%;
+}
+
+#home-carousel {
+    height: 80%;
+    margin-bottom: 4rem;
+}
+
+#home-carousel .carousel-inner .carousel-item {
+    height: 100%;
+}
+
+#home-carousel .carousel-inner .carousel-item .slide {
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+}
+
+#home-carousel .carousel-inner .carousel-item #slide1 {
+    background-image: url("/static/images/home_carousel/Slide1.0ce47552bf75.jpg");
+    background-size: 100% 110%;
+}
+
+#home-carousel .carousel-inner .carousel-item #slide2 {
+    background-image: url("/static/images/home_carousel/Slide2.be9418e21935.jpg");
+}
+
+#home-carousel .carousel-inner .carousel-item #slide3 {
+    background-image: url("/static/images/home_carousel/Slide3.a1be042a90ec.jpg");
+}
+
+#home-carousel .carousel-inner .carousel-item #slide4 {
+    background-image: url("/static/images/home_carousel/Slide4.e46d4677da5e.jpg");
+}
+
+.page-heading {
+    font-size: 3rem;
+    font-weight: 300;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+#about-section {
+    width: 80%;
+    margin: auto;
+    padding-bottom: 4rem;
+    padding-top: 4rem;
+}
+
+#about-section .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#about-section .content .description {
+    display: flex;
+    justify-content: center;
+    color: #999999;
+    font-size: 1.5rem;
+    font-weight: 300;
+    padding-bottom: 2rem;
+}
+
+#services-section {
+    width: 80%;
+    margin: auto;
+    padding-bottom: 4rem;
+}
+
+#services-section .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#services-section .content .row {
+    width: 100%;
+}
+
+#services-section .content .service-card {
+    display: flex;
+    justify-content: center;
+    border: 1px solid #0648d4;
+    border-radius: 5px;
+    padding: 0.7rem;
+    margin-bottom: 2rem;
+}
+
+#services-section .content .service-card .title {
+    color: #0648d4;
+    font-weight: 300;
+}
+
+#stats-section {
+    width: 80%;
+    margin: auto;
+    padding-bottom: 4rem;
+}
+
+#stats-section .title {
+    font-size: 2rem;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+}
+
+#stats-section .col-lg-3 {
+    margin-bottom: 2rem;
+}
+
+#stats-section .stats-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #0648d4;
+    height: 100%;
+    padding: 0.5rem;
+}
+
+#stats-section .stats-card .value {
+    font-size: 4rem;
+}
+
+#stats-section .stats-card .unit {
+    font-size: 1.5rem;
+}
+
+#stats-section .stats-card .title {
+    color: #999999;
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+#feedback-section {
+    width: 80%;
+    margin: auto;
+    padding-bottom: 4rem;
+}
+
+#feedback-section .content .feedback-card {
+    padding-bottom: 2rem;
+}
+
+#feedback-section .content .feedback-card i {
+    color: #999999;
+    padding-bottom: 0.5rem;
+}
+
+#feedback-section .content .feedback-card .comment {
+    font-size: 1.1rem;
+    font-weight: 300;
+    padding-bottom: 1rem;
+}
+
+#feedback-section .content .feedback-card .name {
+    font-size: 1.4rem;
+    font-weight: 700;
+    padding-bottom: 0.2rem;
+}
+
+#feedback-section .content .feedback-card .title {
+    color: #999999;
+    font-size: 1.4rem;
+    font-weight: 300;
+    padding-bottom: 0.2rem;
+}
+
+#contact-section {
+    width: 80%;
+    margin: auto;
+    padding: 4rem 0rem;
+}
+
+#contact-section .page-heading {
+    font-size: 3rem;
+    font-weight: 300;
+    display: flex;
+    justify-content: center;
+}
+
+#contact-section .content .contact-wrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+#contact-section .content .contact-wrapper .details {
+    width: 50%;
+    padding: 1rem;
+}
+
+#contact-section .content .contact-wrapper .details .title {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+#contact-section .content .contact-wrapper .details .content {
+    font-weight: 300;
+    padding-bottom: 2rem;
+}
+
+#contact-section .content .contact-wrapper .details .content a {
+    color: #0648d4;
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+
+#contact-section .content .contact-wrapper .details .content .map-wrapper {
+    width: 100%;
+}
+
+#contact-section .content .contact-wrapper .details .social-plugins a {
+    margin-right: 1.5rem;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+#contact-section .content .contact-wrapper .form {
+    width: 50%;
+}
+
+#contact-section .content .contact-wrapper .form form {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+#contact-section .content .contact-wrapper .form input, .contact-wrapper .form input:focus {
+    height: 2rem;
+    border-radius: 3px;
+    font-weight: 300;
+    padding: 0.3rem;
+    width: 100%;
+    margin: 1rem 0rem;
+}
+
+#contact-section .content .contact-wrapper .form textarea, #contact-section .content .contact-wrapper .form textarea:focus {
+    border-radius: 3px;
+    font-weight: 300;
+    padding: 0.3rem;
+    width: 100%;
+    margin: 1rem 0rem;
+}
+
+#contact-section .content .contact-wrapper .form input, .contact-wrapper .form textarea {
+    border: 0.5px solid #acacac;
+}
+
+#contact-section .content .contact-wrapper .form input:focus, #contact-section .content .contact-wrapper .form textarea:focus {
+    border: 0.5px solid #0648d4;
+    outline: none;
+}
+
+@media screen and (max-width: 768px) {
+    #contact-section {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    #home-carousel {
+        height: 50%;
+    }
+
+    #home-carousel .carousel-inner .carousel-item #slide1 {
+        background-size: 210% 180%;
+        background-position: 0% 75%;
+    }
+
+    #home-carousel .carousel-inner .carousel-item #slide2 {
+        background-size: cover;
+    }
+
+    #home-carousel .carousel-inner .carousel-item #slide3 {
+        background-size: cover;
+        background-position: 10% 0%;
+    }
+
+    #home-carousel .carousel-inner .carousel-item #slide4 {
+        background-size: cover;
+        background-position: 75% 0%;
+    }
+    
+    #contact-section .content .contact-wrapper {
+        flex-direction: column-reverse;
+    }
+
+    #contact-section .content .contact-wrapper .details {
+        width: 100%;
+    }
+
+    #contact-section .content .contact-wrapper .form {
+        width: 100%;
+    }
+}

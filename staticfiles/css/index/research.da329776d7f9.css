@@ -1,0 +1,57 @@
+.research-wrapper {
+    width: 80%;
+    margin: auto;
+    padding: 4rem 0rem;
+}
+
+.research-wrapper .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.research-wrapper .content .heading {
+    font-size: 3rem;
+    font-weight: 300;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 2rem;
+}
+
+.research-wrapper .content .row {
+    width: 80%;
+}
+
+.research-wrapper .content .research-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #999999;
+    border-radius: 5px;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    justify-content: space-between;
+}
+
+.research-wrapper .content .research-card .description {
+    font-size: 1.1rem;
+    font-weight: 300;
+    padding-bottom: 0.5rem;
+}
+
+.research-wrapper .content .research-card .timestamp {
+    font-size: 1rem;
+    font-weight: 300;
+    padding-bottom: 0.5rem;
+}
+
+.research-wrapper .content .research-card .external-link a {
+    color: #0648d4;
+    font-size: 1rem;
+    font-weight: 300;
+    text-decoration: none;
+}
+
+.research-wrapper .content .research-card .external-link a:hover {
+    text-decoration: underline;
+}

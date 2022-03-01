@@ -1,0 +1,494 @@
+{% extends '../base.html' %}
+
+{% load static %}
+{% load beautify %}
+
+{% block title %}
+Query Form
+{% endblock title %}
+
+{% block custom_css %}
+<link rel="stylesheet" href="{% static 'css/quote/quote_form.css' %}">
+{% endblock custom_css %}
+
+{% block main_content %}
+<div class="form-wrapper">
+    <div class="content">
+        <div class="page-heading">Request a Quote</div>
+        <form method="POST">
+            {% csrf_token %}
+            {% if errors %}
+            {% for key, value in errors.items %}
+                <div class="error-message">{{key|beautify}}: {{value.pop.message|capfirst}}</div>
+            {% endfor %}
+            {% endif %}
+            {% for error in list_errors %}
+                <div class="error-message">{{error}}</div>
+            {% endfor %}
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-name">Personal Details</div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="input-box">
+                        <label for="company-name">Company / University Name<span class="compulsory">*</span></label>
+                        <input type="text" class="text-input" name="company_name" id="company-name" required maxlength="100">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="input-box">
+                        <label for="requestor-name">Name<span class="compulsory">*</span></label>
+                        <input type="text" class="text-input" name="name" id="requestor-name" required maxlength="100">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="input-box">
+                        <label for="address">Address<span class="compulsory">*</span></label>
+                        <input type="text" class="text-input" name="address" id="address" required maxlength="500">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="input-box">
+                        <label for="contact-number">Contact Number<span class="compulsory">*</span></label>
+                        <input type="text" class="text-input" name="contact" id="contact-number" required pattern="\d*" title="Only numbers allowed" minlength="7" maxlength="15">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="input-box">
+                        <label for="email-id">Email ID<span class="compulsory">*</span></label>
+                        <input type="email" class="text-input" name="email" id="email-id" required maxlength="254">
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="section-name">Project Details</div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="input-box">
+                        <label for="project-name">Project Name<span class="compulsory">*</span></label>
+                        <input type="text" class="text-input" name="project_name" id="project-name" required maxlength="500">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="input-box">
+                        <label>Planned use(s) of the project<span class="compulsory">*</span></label>
+                        <label for="basic">
+                            <input type="radio" name="project_use" id="basic" required value="Basic Research">
+                            Basic Research
+                        </label>
+                        <label for="clinical">
+                            <input type="radio" name="project_use" id="clinical" required value="Clinical Research">
+                            Clinical Research
+                        </label>
+                        <label for="diagnostic">
+                            <input type="radio" name="project_use" id="diagnostic" required value="Diagnostic">
+                            Diagnostic
+                        </label>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="input-box">
+                        <label>Nature of study<span class="compulsory">*</span></label>
+                        <label for="longitudinal">
+                            <input type="radio" name="study_nature" id="longitudinal" required value="Longitudinal">
+                            Longitudinal
+                        </label>
+                        <label for="one-time">
+                            <input type="radio" name="study_nature" id="one-time" required value="One time">
+                            One time
+                        </label>
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="input-box">
+                        <label for="start-date">Tentative start date<span class="compulsory">*</span></label>
+                        <input type="date" class="text-input" name="start_date" id="start-date" required min="{{today}}">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="input-box">
+                        <label for="project-objective">Project objective<span class="compulsory">*</span></label>
+                        <textarea class="text-input" name="project_objective" id="project-objective" rows="3" required></textarea>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="input-box">
+                        <label for="project-outcome">Project outcome expectations<span class="compulsory">*</span></label>
+                        <textarea class="text-input" name="project_outcome" id="project-outcome" rows="3" required></textarea>
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="section-name">NGS Service needed</div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="input-box">
+                        <label for="service-choice">Please mention choice of service<span class="compulsory">*</span></label>
+                        <select name="service_choice" id="service-choice" required>
+                            <option value="">---</option>
+                            <option value="DNA Sequencing">DNA Sequencing</option>
+                            <option value="RNA Sequencing">RNA Sequencing</option>
+                            <option value="Epigenetics">Epigenetics</option>
+                            <option value="Microarray">Microarray</option>
+                            <option value="10X">10X</option>
+                            <option value="Pacbio">Pacbio</option>
+                            <option value="Metagenomics">Metagenomics</option>
+                            <option value="Metatranscriptomics">Metatranscriptomics</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="input-box">
+                        <label for="specific-service">Please select specific service<span class="compulsory">*</span></label>
+                        <select name="specific_service" id="specific-service" required>
+                            <option value="">---</option>
+                            <optgroup label="DNA Sequencing" style="display: none;">
+                                <option value="Whole Genome Sequencing">Whole Genome Sequencing</option>
+                                <option value="Whole Exome Sequencing">Whole Exome Sequencing</option>
+                                <option value="Denovo Sequencing">Denovo Sequencing</option>
+                                <option value="Genotyping-By-Sequencing">Genotyping-By-Sequencing</option>
+                            </optgroup>
+                            <optgroup label="RNA Sequencing" style="display: none;">
+                                <option value="Whole Transcriptome analysis">Whole Transcriptome analysis</option>
+                                <option value="Long non-coding RNA">Long non-coding RNA</option>
+                                <option value="Isoform Sequencing">Isoform Sequencing</option>
+                            </optgroup>
+                            <optgroup label="Epigenetics" style="display: none;">
+                                <option value="Whole Genome Bi-sulfite Sequencing">Whole Genome Bi-sulfite Sequencing</option>
+                                <option value="MeDIP-Seq">MeDIP-Seq</option>
+                                <option value="ChIP-Seq">ChIP-Seq</option>
+                                <option value="ATAC-Seq">ATAC-Seq</option>
+                            </optgroup>
+                            <optgroup label="Microarray" style="display: none;">
+                                <option value="Gene Expression">Gene Expression</option>
+                                <option value="Copy number variation">Copy number variation</option>
+                                <option value="miRNA profiling">miRNA profiling</option>
+                                <option value="Custom">Custom</option>
+                            </optgroup>
+                            <optgroup label="10X" style="display: none;">
+                                <option value="Single Cell Genome Sequencing">Single Cell Genome Sequencing</option>
+                                <option value="Single Cell ATAC Sequencing">Single Cell ATAC Sequencing</option>
+                                <option value="Single Cell RNA Sequencing">Single Cell RNA Sequencing</option>
+                            </optgroup>
+                            <optgroup label="Pacbio" style="display: none;">
+                                <option value="Pacbio Genome Sequencing">Pacbio Genome Sequencing</option>
+                                <option value="Pacbio Isoseq Sequencing">Pacbio Isoseq Sequencing</option>
+                            </optgroup>
+                            <optgroup label="Metagenomics" style="display: none;">
+                                <option value="Shotgun Metagenome">Shotgun Metagenome</option>
+                                <option value="16S/18S rDNA">16S/18S rDNA</option>
+                                <option value="ITS sequencing">ITS sequencing</option>
+                            </optgroup>
+                            <optgroup label="Metatranscriptomics" style="display: none;">
+                                <option value="Enriched for coding RNA">Enriched for coding RNA</option>
+                                <option value="16S rRNA">16S rRNA</option>
+                            </optgroup>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="input-box">
+                        <label for="customized-service">Customized service (please elaborate nature of service needed)</label>
+                        <textarea class="text-input" name="customized_service" id="customized-service" rows="3"></textarea>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="input-box">
+                        <label>Platform<span class="compulsory">*</span></label>
+                        <label for="illumina">
+                            <input type="radio" name="ngs_platform" id="illumina" required value="Illumina (Novaseq6000)">
+                            Illumina (Novaseq6000)
+                        </label>
+                        <label for="illumina-miseq">
+                            <input type="radio" name="ngs_platform" id="illumina-miseq" required value="Illumina (MiSeq)">
+                            Illumina (MiSeq)
+                        </label>
+                        <label for="nanopore">
+                            <input type="radio" name="ngs_platform" id="nanopore" required value="Nanopore">
+                            Nanopore
+                        </label>
+                        <label for="illumina-nanopore">
+                            <input type="radio" name="ngs_platform" id="illumina-nanopore" required value="Illumina followed by Nanopore">
+                            Illumina followed by Nanopore
+                        </label>
+                        <label for="ion-torrent">
+                            <input type="radio" name="ngs_platform" id="ion-torrent" required value="Ion Torrent">
+                            Ion Torrent
+                        </label>
+                        <label for="10x">
+                            <input type="radio" name="ngs_platform" id="10x" required value="10X Chromium">
+                            10X Chromium
+                        </label>
+                        <label for="pacbio">
+                            <input type="radio" name="ngs_platform" id="pacbio" required value="PacBio">
+                            PacBio
+                        </label>
+                        <label for="affymetrix">
+                            <input type="radio" name="ngs_platform" id="affymetrix" required value="Affymetrix">
+                            Affymetrix
+                        </label>
+                        <label for="ngs-others">
+                            <input type="radio" name="ngs_platform" id="ngs-others" required value="Others">
+                            Others
+                        </label>
+                        <input type="text" class="text-input" name="ngs_specify" placeholder="Please specify" style="margin-top: 0.5rem; display: none;" maxlength="100">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="input-box">
+                        <label>Sample type<span class="compulsory">*</span></label>
+                        <label for="sample-type-dna">
+                            <input type="radio" name="sample_type" id="sample-type-dna" required value="Genomic DNA">
+                            Genomic DNA
+                        </label>
+                        <label for="sample-type-meta-dna">
+                            <input type="radio" name="sample_type" id="sample-type-meta-dna" required value="Metagenomic DNA">
+                            Metagenomic DNA
+                        </label>
+                        <label for="sample-type-enriched-dna">
+                            <input type="radio" name="sample_type" id="sample-type-enriched-dna" required value="Enriched DNA">
+                            Enriched DNA
+                        </label>
+                        <label for="sample-type-rna">
+                            <input type="radio" name="sample_type" id="sample-type-rna" required value="Total RNA">
+                            Total RNA
+                        </label>
+                        <label for="sample-type-enriched-rna">
+                            <input type="radio" name="sample_type" id="sample-type-enriched-rna" required value="Enriched RNA">
+                            Enriched RNA
+                        </label>
+                        <label for="sample-type-pcr">
+                            <input type="radio" name="sample_type" id="sample-type-pcr" required value="PCR products">
+                            PCR products
+                        </label>
+                        <label for="sample-type-tissue">
+                            <input type="radio" name="sample_type" id="sample-type-tissue" required value="Tissue Sample">
+                            Tissue Sample
+                        </label>
+                        <label for="sample-type-ffpe">
+                            <input type="radio" name="sample_type" id="sample-type-ffpe" required value="FFPE">
+                            FFPE
+                        </label>
+                        <label for="sample-type-stool">
+                            <input type="radio" name="sample_type" id="sample-type-stool" required value="Stool">
+                            Stool
+                        </label>
+                        <label for="sample-type-swab">
+                            <input type="radio" name="sample_type" id="sample-type-swab" required value="Surface swab">
+                            Surface swab
+                        </label>
+                        <label for="sample-type-soil">
+                            <input type="radio" name="sample_type" id="sample-type-soil" required value="Soil">
+                            Soil
+                        </label>
+                        <label for="sample-type-water">
+                            <input type="radio" name="sample_type" id="sample-type-water" required value="Water">
+                            Water
+                        </label>
+                        <label for="sample-type-others">
+                            <input type="radio" name="sample_type" id="sample-type-others" required value="Others">
+                            Others
+                        </label>
+                        <input type="text" class="text-input" name="sample_type_specify" placeholder="Please specify" style="margin-top: 0.5rem; display: none;" maxlength="100">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="input-box">
+                        <label for="model-type">Model type<span class="compulsory">*</span></label>
+                        <input type="text" class="text-input" name="model_type" id="model-type" required maxlength="100">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="input-box">
+                        <label for="prepared-library">Prepared library (please mention kit used)<span class="compulsory">*</span></label>
+                        <input type="text" class="text-input" name="prepared_library" id="prepared-library" required maxlength="500">
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="input-box">
+                        <label for="sample-number">Number of samples<span class="compulsory">*</span></label>
+                        <input type="number" class="text-input" name="sample_number" id="sample-number" required>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="input-box">
+                        <label>Sequencing Parameters (read length)<span class="compulsory">*</span></label>
+                        <label for="sequencing-single">
+                            <input type="radio" name="sequencing_parameter" id="sequencing-single" required value="Single end: 50">
+                            Single end: 50
+                        </label>
+                        <label for="sequencing-double-75">
+                            <input type="radio" name="sequencing_parameter" id="sequencing-double-75" required value="Paired end: 75">
+                            Paired end: 75
+                        </label>
+                        <label for="sequencing-double-150">
+                            <input type="radio" name="sequencing_parameter" id="sequencing-double-150" required value="Paired end: 150">
+                            Paired end: 150
+                        </label>
+                        <label for="sequencing-double-250">
+                            <input type="radio" name="sequencing_parameter" id="sequencing-double-250" required value="Paired end: 250">
+                            Paired end: 250
+                        </label>
+                        <label for="sequencing-double-300">
+                            <input type="radio" name="sequencing_parameter" id="sequencing-double-300" required value="Paired end: 300">
+                            Paired end: 300
+                        </label>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="input-box">
+                        <label for="sequencing-other">Any other sequencing parameter</label>
+                        <input type="text" class="text-input" name="sequencing_other" id="sequencing-other" maxlength="100">
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="input-box">
+                        <label for="sequencing-depth">Required Sequencing Depth per sample<span class="compulsory">*</span></label>
+                        <select name="sequencing_depth" id="sequencing-depth" required>
+                            <option value="">---</option>
+                            <option value="30X">30X</option>
+                            <option value="50X">50X</option>
+                            <option value="100X">100X</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="input-box">
+                        <label>Expected Data size in Gb per sample<span class="compulsory">*</span></label>
+                        <label for="expected-data-upto-2">
+                            <input type="radio" name="expected_data" id="expected-data-upto-2" required value="Upto 2 Gb">
+                            Upto 2 Gb
+                        </label>
+                        <label for="expected-data-2-10">
+                            <input type="radio" name="expected_data" id="expected-data-2-10" required value="2-10 Gb">
+                            2-10 Gb
+                        </label>
+                        <label for="expected-data-10-20">
+                            <input type="radio" name="expected_data" id="expected-data-10-20" required value="10-20 Gb">
+                            10-20 Gb
+                        </label>
+                        <label for="expected-data-20-100">
+                            <input type="radio" name="expected_data" id="expected-data-20-100" required value="20-100 Gb">
+                            20-100 Gb
+                        </label>
+                        <label for="expected-data-other">
+                            <input type="radio" name="expected_data" id="expected-data-other" required value="Others">
+                            Others
+                        </label>
+                        <input type="text" class="text-input" name="expected_data_specify" placeholder="Please specify" style="margin-top: 0.5rem; display: none;" maxlength="100">
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="section-name">Bioinformatics Analytics Support</div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="input-box">
+                        <label for="reference-genome">Reference genome name (if available, which will be utilized for post-sequencing analysis) Reference genome size in bp if any</label>
+                        <input type="text" class="text-input" name="reference_genome" id="reference-genome" maxlength="500">
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="input-box">
+                        <label>Data analysis activities<span class="compulsory">*</span></label>
+                        <label for="data-analysis-qc">
+                            <input type="radio" name="data_analysis" id="data-analysis-qc" required value="QC of raw reads">
+                            QC of raw reads
+                        </label>
+                        <label for="data-analysis-genome">
+                            <input type="radio" name="data_analysis" id="data-analysis-genome" required value="Genome assembly: Reference based">
+                            Genome assembly: Reference based
+                        </label>
+                        <label for="data-analysis-genome-de-novo">
+                            <input type="radio" name="data_analysis" id="data-analysis-genome-de-novo" required value="Genome assembly: De novo">
+                            Genome assembly: De novo
+                        </label>
+                        <label for="data-analysis-transcript">
+                            <input type="radio" name="data_analysis" id="data-analysis-transcript" required value="Quantifying transcipt abundance">
+                            Quantifying transcipt abundance
+                        </label>
+                        <label for="data-analysis-dge">
+                            <input type="radio" name="data_analysis" id="data-analysis-dge" required value="DGE analysis">
+                            DGE analysis
+                        </label>
+                        <label for="data-analysis-comparative">
+                            <input type="radio" name="data_analysis" id="data-analysis-comparative" required value="Comparative genomics: SNP/in-del">
+                            Comparative genomics: SNP/in-del
+                        </label>
+                        <label for="data-analysis-analysis">
+                            <input type="radio" name="data_analysis" id="data-analysis-analysis" required value="Report of analysis">
+                            Report of analysis
+                        </label>
+                        <label for="data-analysis-other">
+                            <input type="radio" name="data_analysis" id="data-analysis-other" required value="Others">
+                            Others
+                        </label>
+                        <input type="text" class="text-input" name="data_analysis_specify" placeholder="Please specify" style="margin-top: 0.5rem; display: none;" maxlength="100">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="input-box">
+                        <label>Data Delivery method<span class="compulsory">*</span></label>
+                        <label for="data-delivery-hdd">
+                            <input type="radio" name="data_delivery" id="data-delivery-hdd" required value="HDD">
+                            HDD
+                        </label>
+                        <label for="data-delivery-server">
+                            <input type="radio" name="data_delivery" id="data-delivery-server" required value="Server">
+                            Server
+                        </label>
+                        <label for="data-delivery-cloud">
+                            <input type="radio" name="data_delivery" id="data-delivery-cloud" required value="Cloud Storage">
+                            Cloud Storage
+                        </label>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="input-box">
+                        <label>Data stored with miBiome<span class="compulsory">*</span></label>
+                        <label for="data-stored-yes">
+                            <input type="radio" name="data_stored" id="data-stored-yes" required value="Yes">
+                            Yes
+                        </label>
+                        <label for="data-stored-no">
+                            <input type="radio" name="data_stored" id="data-stored-no" required value="No">
+                            No
+                        </label>
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="input-box">
+                        <label for="comments">Comments</label>
+                        <textarea class="text-input" name="comments" id="comments" rows="3"></textarea>
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="input-box">
+                        <label>For first time customers: How did you hear about us?</label>
+                        <label for="hear-us-internet">
+                            <input type="radio" name="hear_us" id="hear-us-internet" value="Internet">
+                            Internet
+                        </label>
+                        <label for="hear-us-website">
+                            <input type="radio" name="hear_us" id="hear-us-website" value="Website">
+                            Website
+                        </label>
+                        <label for="hear-us-contact">
+                            <input type="radio" name="hear_us" id="hear-us-contact" value="Contact">
+                            Contact
+                        </label>
+                        <label for="hear-us-other">
+                            <input type="radio" name="hear_us" id="hear-us-other" value="Others">
+                            Others
+                        </label>
+                        <input type="text" class="text-input" name="hear_us_specify" placeholder="Please specify" style="margin-top: 0.5rem; display: none;" maxlength="100">
+                    </div>
+                </div>
+            </div>
+            <div id="query-message"></div>
+            <button type="submit" class="primary-button">Submit</button>
+        </form>
+    </div>
+</div>
+{% endblock %}
+
+{% block custom_script %}
+<script src="{% static 'js/quote/quote_form.js' %}"></script>
+{% endblock custom_script %}

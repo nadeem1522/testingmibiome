@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@font-face {
+    font-family: TTCommons;
+    font-style: normal;
+    font-weight: normal;
+    src: local('TTCommons'), 
+    url("/static/fonts/TT_Commons/Regular.64f3f9984474.ttf");
+}
+
+@font-face {
+    font-family: TTCommons;
+    font-style: normal;
+    font-weight: 300;
+    src: local('TTCommons'), 
+    url("/static/fonts/TT_Commons/Light.263de624d1be.ttf");
+}
+
+@font-face {
+    font-family: DMSerif;
+    font-style: normal;
+    font-weight: normal;
+    src: local('DMSerif'), 
+    url("/static/fonts/DM_Serif_Text/Regular.73ba0dd02872.ttf");
+}
+
+html, body {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: TTCommons;
+}
+
+.navbar {
+    padding: 1rem;
+}
+
+.navbar.video-loc {
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+
+.navbar.normal-loc {
+    position: static;
+    background-color: white;
+    z-index: 1030;
+    width: 100%;
+    box-shadow: 1px 0px 60px 2px rgba(0, 0, 0, 0.1);
+}
+
+.navbar.video-loc .navbar-nav .nav-link {
+    color: white;
+}
+
+.navbar.normal-loc .navbar-nav .nav-link {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.navbar .navbar-nav .nav-link {
+    font-size: 1.2rem;
+    padding-left: 1rem;
+}
+
+.navbar .navbar-brand img {
+    height: 5rem;
+}
+
+footer {
+    color: white;
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 1.5rem;
+    background: #181818;
+}
+
+footer .col-lg-3 {
+    padding-bottom: 2rem;
+}
+
+footer .heading {
+    font-family: Poppins;
+    text-align: center;
+    font-weight: 500;
+    font-size: 1.56rem;
+}
+
+footer .heading:after {
+    display: block;
+    height: 0.13rem;
+    background-color: #3498db;
+    content: " ";
+    width: 3.13rem;
+    margin: 0 auto;
+    margin-top: 0.75rem;
+    margin-bottom: 0.63rem;
+}
+
+footer .content {
+    padding-top: 1rem;
+    font-family: TTCommons;
+    font-weight: 300;
+    font-size: 1.25rem;
+}
+
+footer .content a {
+    color: white;
+    text-decoration: none;
+}
+
+footer .content a:hover {
+    color: #3498db
+}
+
+footer .copyrightText {
+    font-family: TTCommons;
+    width: 100%;
+    padding-top: 2rem;
+    text-align: right;
+    color: white;
+    font-size: 1rem;
+    font-weight: 300;
+}

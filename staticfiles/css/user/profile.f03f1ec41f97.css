@@ -1,0 +1,188 @@
+.background {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    z-index: -100;
+}
+
+#helix-primary {
+    position: fixed;
+    height: 160%;
+    transform: rotate(-15deg);
+    top: -30%;
+    left: -15%;
+}
+
+#helix-gradient {
+    position: fixed;
+    height: 90%;
+    transform: rotate(45deg);
+    right: -5%;
+    bottom: -30%;
+}
+
+.profile-wrapper {
+    height: 100%;
+    width: 40%;
+    margin: auto;
+}
+
+.profile-wrapper .content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-wrapper .content .heading {
+    color: #ef476f;
+    font-size: 2.5rem;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    line-height: 110%;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    text-align: center;
+}
+
+.profile-wrapper .content form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.profile-wrapper .content .input-block {
+    position: relative;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.profile-wrapper .content .input-block input {
+    font-weight: normal;
+    color: black;
+    width: 100%;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    border: 1px solid #acacac;
+    outline:none;
+}
+
+.profile-wrapper .content .input-block span.placeholder {
+    position: absolute;
+    margin: 0.7rem 0rem;
+    color:  #acacac;
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    top: 0;
+    left: 1rem;
+    transition: all 0.2s;
+    transform-origin: 0% 0%;
+    background: none;
+    pointer-events: none;
+}
+
+.profile-wrapper .content .input-block input:valid + span.placeholder,
+.profile-wrapper .content .input-block input:focus + span.placeholder {
+    transform: scale(0.8) translateY(-1.2rem);
+    background: #fff;
+    padding: 0rem 0.2rem;
+}
+
+.profile-wrapper .content .input-block input:focus {
+    color: black;
+    border-color: #ef476f;
+}
+
+.profile-wrapper .content .input-block input:focus + span.placeholder {
+    color: #ef476f;
+}
+
+.profile-wrapper .content .input-block select {
+    font-weight: normal;
+    color: black;
+    width: 100%;
+    padding: 0.7rem 1rem 0.4rem 1rem;
+    border-radius: 5px;
+    border: 1px solid #acacac;
+    outline:none;
+    background-color: white;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 16px 12px;
+    appearance: none;
+}
+
+.profile-wrapper .content .input-block select:focus {
+    color: black;
+    border-color: #ef476f;
+}
+
+.profile-wrapper .content .input-block select + span.placeholder {
+    position: absolute;
+    color:  #acacac;
+    display: flex;
+    align-items: center;
+    font-size: 0.8rem;
+    top: -1rem;
+    left: 1rem;
+    padding: 0rem 0.2rem;
+    transform-origin: 0% 0%;
+    background: #fff;
+    pointer-events: none;
+}
+
+.profile-wrapper .content .input-block select:focus + span.placeholder {
+    color: #ef476f;
+}
+
+.profile-wrapper .content .input-block input.disabled-input {
+    cursor: not-allowed;
+}
+
+.profile-wrapper .content .input-block input.disabled-input + span.placeholder {
+    position: absolute;
+    color:  #acacac;
+    display: flex;
+    align-items: center;
+    font-size: 0.8rem;
+    top: -1rem;
+    left: 1rem;
+    padding: 0rem 0.2rem;
+    transform-origin: 0% 0%;
+    background: #fff;
+    pointer-events: none;
+}
+
+@media screen and (max-width: 768px) {
+    .profile-wrapper {
+        width: 50%;
+    }
+
+    #helix-gradient {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .profile-wrapper {
+        width: 80%;
+        margin: auto;
+    }
+}
+
+@media screen and (max-height: 576px) {
+    .profile-wrapper .content {
+        height: max-content;
+        justify-content: flex-start;
+    }
+
+    .profile-wrapper .primary-button {
+        margin-bottom: 2rem;
+    }
+}

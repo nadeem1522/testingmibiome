@@ -1,0 +1,76 @@
+{% extends '../flash_base.html' %}
+
+{% load static %}
+
+{% block title %}
+Login
+{% endblock title %}
+
+{% block custom_css %}
+<link rel="stylesheet" href="{% static 'css/user/login.css' %}">
+{% endblock custom_css %}
+
+{% block main_content %}
+<div class="login-wrapper">
+    <div class="content">
+        <div class="info-holder">
+            <div class="info-section">
+                <div class="title">Welcome back!</div>
+                <div class="description">You always bring smile to us</div>
+            </div>
+            <div class="image-holder">
+                <img src="{% static 'images/login.svg' %}" alt="Authentication">
+            </div>
+        </div>
+        <div class="form-holder">
+            <form id="login-form" method="POST">
+                <div class="title">Login</div>
+                {% csrf_token %}
+                <div class="input-block">
+                    <input type="email" id="email" name="email" required>
+                    <span class="placeholder">Email</span>
+                </div>
+                <div class="input-block">
+                    <input type="password" id="password" name="password" required>
+                    <span class="placeholder">Password</span>
+                </div>
+                <div class="mb-4">
+                    <a href="{% url 'user:password_reset' %}"><button type="button" class="primary-flat-button">Forgot Password?</button></a>
+                </div>
+                <button class="primary-button">Let's Go</button>
+            </form>
+            <div class="signup-area">
+                <div class="highlight-text">Are you a new user?</div>
+                <a href="{% url 'user:signup' %}"><button type="button" class="primary-flat-button">Sign Up</button></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal" tabindex="-1" id="error-modal">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Error</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                {{message}}
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="primary-flat-button" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock main_content %}
+
+{% block custom_script %}
+{% if message %}
+<script>
+    $(document).ready(function() {
+        $('#error-modal').modal('show');
+    })
+</script>
+{% endif %}
+{% endblock custom_script %}

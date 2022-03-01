@@ -1,0 +1,52 @@
+{% extends '../flash_base.html' %}
+
+{% load static %}
+
+{% block title %}
+My Profile
+{% endblock title %}
+
+{% block custom_css %}
+<link rel="stylesheet" href="{% static 'css/user/profile.css' %}">
+{% endblock custom_css %}
+
+{% block main_content %}
+<div class="background">
+    <img id="helix-gradient" src="{% static 'images/helix_gradient.svg' %}" alt="Helix Gradient">
+    <img id="helix-primary" src="{% static 'images/helix_primary.svg' %}" alt="Helix Primary">
+</div>
+<div class="profile-wrapper">
+    <div class="content">
+        <div class="heading">My Profile</div>
+        <form action="{% url 'user:profile' request.user.pk %}" method="POST">
+            {% csrf_token %}
+            {% for field in form %}
+            {% if forloop.counter == 2 %}
+            <div style="display: flex; justify-content: space-between; width: 100%;">
+                <div class="input-block" style="width: 20%;">
+                    {{field}}
+                    <span class="placeholder">{{field.label}}</span>
+                </div>
+            {% elif forloop.counter == 3 %}
+                <div class="input-block" style="width: 35%;">
+                    {{field}}
+                    <span class="placeholder">{{field.label}}</span>
+                </div>
+            {% elif forloop.counter == 4 %}
+                <div class="input-block" style="width: 35%;">
+                    {{field}}
+                    <span class="placeholder">{{field.label}}</span>
+                </div>
+            </div>
+            {% else %}
+            <div class="input-block">
+                {{field}}
+                <span class="placeholder">{{field.label}}</span>
+            </div>
+            {% endif %}
+            {% endfor %}
+            <button class="primary-button">Save Changes</button>
+        </form>
+    </div>
+</div>
+{% endblock main_content %}

@@ -1,0 +1,201 @@
+.signup-wrapper {
+    height: 100%;
+    width: 80%;
+    margin: auto;
+}
+
+.signup-wrapper .content {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.signup-wrapper .content .info-holder {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.signup-wrapper .content .info-section {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.signup-wrapper .content .info-section .title {
+    color: #ef476f;
+    font-size: 2.5rem;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    line-height: 110%;
+    padding-bottom: 0.5rem;
+}
+
+.signup-wrapper .content .info-section .description {
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+.signup-wrapper .content .info-holder .image-holder {
+    width: 100%;
+}
+
+.signup-wrapper .content .info-holder .image-holder img {
+    width: 100%;
+}
+
+.signup-wrapper .content .form-holder {
+    width: 45%;
+}
+
+.signup-wrapper .content .form-holder form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.signup-wrapper .content .form-holder .title {
+    color: #ef476f;
+    font-size: 2.5rem;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    line-height: 110%;
+    padding-bottom: 2rem;
+    text-align: center;
+}
+
+.signup-wrapper .content .form-holder .input-block {
+    position: relative;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.signup-wrapper .content .form-holder .input-block input {
+    font-weight: normal;
+    color: black;
+    width: 100%;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    border: 1px solid #acacac;
+    outline:none;
+}
+
+.signup-wrapper .content .form-holder .input-block span.placeholder {
+    position: absolute;
+    margin: 0.7rem 0rem;
+    color:  #acacac;
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    top: 0;
+    left: 1rem;
+    transition: all 0.2s;
+    transform-origin: 0% 0%;
+    background: none;
+    pointer-events: none;
+}
+
+.signup-wrapper .content .form-holder .input-block input:valid + span.placeholder,
+.signup-wrapper .content .form-holder .input-block input:focus + span.placeholder {
+    transform: scale(0.8) translateY(-1.2rem);
+    background: #fff;
+    padding: 0rem 0.2rem;
+}
+
+.signup-wrapper .content .form-holder .input-block input:focus {
+    color: black;
+    border-color: #ef476f;
+}
+
+.signup-wrapper .content .form-holder .input-block input:focus + span.placeholder {
+    color: #ef476f;
+}
+
+.signup-wrapper .content .form-holder .input-block select {
+    font-weight: normal;
+    color: black;
+    width: 100%;
+    padding: 0.7rem 1rem 0.4rem 1rem;
+    border-radius: 5px;
+    border: 1px solid #acacac;
+    outline:none;
+    background-color: white;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 16px 12px;
+    appearance: none;
+}
+
+.signup-wrapper .content .form-holder .input-block select:focus {
+    color: black;
+    border-color: #ef476f;
+}
+
+.signup-wrapper .content .form-holder .input-block select + span.placeholder {
+    position: absolute;
+    color:  #acacac;
+    display: flex;
+    align-items: center;
+    font-size: 0.8rem;
+    top: -1rem;
+    left: 1rem;
+    padding: 0rem 0.2rem;
+    transform-origin: 0% 0%;
+    background: #fff;
+    pointer-events: none;
+}
+
+.signup-wrapper .content .form-holder .input-block select:focus + span.placeholder {
+    color: #ef476f;
+}
+
+.signup-wrapper .content .form-holder .primary-button {
+    margin: auto;
+}
+
+.signup-wrapper .content .form-holder .login-area {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.signup-wrapper .content .form-holder .login-area .highlight-text {
+    font-size: 1.4rem;
+    font-weight: 300;
+    padding-bottom: 0.5rem;
+}
+
+@media screen and (max-width: 1024px) {
+    .signup-wrapper {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .signup-wrapper .content {
+        padding-top: 2rem;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .signup-wrapper .content .info-holder {
+        width: 100%;
+        padding-bottom: 2rem;
+    }
+
+    .signup-wrapper .content .form-holder {
+        width: 100%;
+        padding-bottom: 2rem;
+    }
+}
+
+@media screen and (max-height: 576px) {
+    .signup-wrapper .content {
+        padding-top: 2rem;
+        height: max-content;
+        justify-content: flex-start;
+    }
+}

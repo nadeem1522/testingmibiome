@@ -1,0 +1,80 @@
+{% extends '../base.html' %}
+
+{% load static %}
+
+{% block title %}
+Notable Projects
+{% endblock title %}
+
+{% block custom_css %}
+<link rel="stylesheet" href="{% static 'css/index/notable_projects.css' %}">
+{% endblock custom_css %}
+
+{% block main_content %}
+<div class="notable-wrapper">
+    <div class="page-heading">Notable Projects</div>
+    <div class="content">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="projects-card">
+                    <div class="image-holder">
+                        <img src="{% static 'images/projects/infection.png' %}" alt="miInfectionBiome">
+                    </div>
+                    <div class="card-title">miInfectionBiome</div>
+                    <div class="description"><strong>miInfectionBiome</strong> (Infectious Disease Identification) is an unbiased diagnostic assay for identification of micro-organisms present in biological fluids.</div>
+                    <div class="description">As it is culture independent, sub-typing and virulence profiling can be performed alongwith AMR (anti-microbial resistance). The tests detect novel, emergent and re-emergent pathogens.</div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="projects-card">
+                    <div class="image-holder">
+                        <img src="{% static 'images/projects/resistant.png' %}" alt="miResistantBiome">
+                    </div>
+                    <div class="card-title">miResistantBiome</div>
+                    <div class="description"><strong>miResistantBiome</strong> (Antibiotic Resistance Determination test) is a sequence based reporting for drug resistance. It determines the presence or absence of established markers for resistance to various drugs.</div>
+                    <div class="description">New panel of resistance markers created in-house through data analytics, AI and ML. Targeted therapy recommended by health care professionals based on report will reduce cost and minimize drug side effects.</div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="projects-card">
+                    <div class="image-holder">
+                        <img src="{% static 'images/projects/cancer.png' %}" alt="miCancerBiome">
+                    </div>
+                    <div class="card-title">miCancerBiome</div>
+                    <div class="description">4,13,519 men and 3,71,302 women lost their lives to cancer in India, in the year 2018. One woman dies of cervical cancer every 8 minutes. For every 2 women newly diagnosed with breast cancer, one woman dies of it. Tobacco alone kills 3500 people everyday. Estimated number of people living with cancer in India is around 2.25 million.</div>
+                    <div class="description"><strong>miCancerBiome</strong> (Genomic data-based interventions) will help people make better decisions for chemotherapy, surgery, radiation treatment and all targeted therapies. In addition, these tests will also aid in preventing cancer with a strong emphasis on research for India-specific biomarkers</div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="projects-card">
+                    <div class="image-holder">
+                        <img src="{% static 'images/projects/reproductive.png' %}" alt="miReproductiveBiome">
+                    </div>
+                    <div class="card-title">miReproductiveBiome</div>
+                    <div class="description"><strong>miReproductiveBiome</strong> is focused on research for India-specific markers for reproductive health. Empowering informed choices for fertility and pregnancy is very crucial. Studies on genome and microbiome parameters that affect reproductive health and their consequences to child-birth and beyond. New research-based solutions for reproductive health</div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="projects-card">
+                    <div class="image-holder">
+                        <img class="rotate-45" src="{% static 'images/projects/inherited.png' %}" alt="miInheritedBiome">
+                    </div>
+                    <div class="card-title">miInheritedBiome</div>
+                    <div class="description">Disease conditions in which the genetic changes are almost exclusively responsible for causing the condition are called genetic disorders, or inherited diseases.</div>
+                    <div class="description"><strong>miInheritedBiome</strong> focuses on India-specific markers for genetic diseases. Scientists, doctors, genetic counsellors and patients can contribute together to address miInheritedBiome</div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="projects-card">
+                    <div class="image-holder">
+                        <img src="{% static 'images/projects/immune.png' %}" alt="miImmuneBiome">
+                    </div>
+                    <div class="card-title">miImmuneBiome</div>
+                    <div class="description">Human leukocyte antigen (HLA) typing is used to match patients and donors for bone marrow or cord blood transplants.</div>
+                    <div class="description"><strong>miImmuneBiome</strong> carries out India-specific HLA typing donor match research and applications. HLA are proteins (or markers) found on most cells in the body. The immune system uses these markers to recognize which cells belong to the body and which do not. HLA typing is used in organ transplants like kidney, heart, platelet, liver, lung etc. </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock main_content %}

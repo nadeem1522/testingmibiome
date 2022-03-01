@@ -1,0 +1,179 @@
+{% extends '../base.html' %}
+
+{% load static %}
+
+{% block title %}
+Research
+{% endblock title %}
+
+{% block custom_css %}
+<link rel="stylesheet" href="{% static 'css/index/research.css' %}">
+{% endblock custom_css %}
+
+{% block main_content %}
+<section class="research">
+    <div class="r-heading">
+        <h2>In Print</h2>
+    </div>
+    <div class="r-box-container">
+            <div class="r-box">
+                <div class="bar"></div>
+                <img src="{% static 'images/manuscript.png' %}">
+                <p>Springer Nature: Microbiome diagnostics and interventions in health and disease</p>
+                <p>2021</p>
+            </div>
+    </div>
+    <div class="r-heading">
+        <h2>Manuscripts in Revision</h2>
+    </div>
+    <div class="r-box-container">
+            <div class="r-box">
+                <div class="bar"></div>
+                <img src="{% static 'images/manuscript.png' %}">
+                <p>Drug Repurposing for ExoN of SARS Cov2</p>
+                <p>24 June 2020</p>
+                <a href="https://osf.io/preprints/7x5ek/" target="_blank" class="r-btn">More</a>
+            </div>
+    </div>
+    <div class="r-heading">
+        <h2>Preprints</h2>
+    </div>
+    <div class="r-box-container">
+            <div class="r-box">
+                <div class="bar"></div>
+                <img src="{% static 'images/manuscript.png' %}">
+                <p>Ribavirin-SARS Cov2 RNA-dependent RNA polymerase docking: Drug Repurposing</p>
+                <p>22 March 2020</p>
+                <a href="https://osf.io/ax98f/" target="_blank" class="r-btn">More</a>
+            </div>
+            <div class="r-box">
+                <div class="bar"></div>
+                <img src="{% static 'images/manuscript.png' %}">
+                <p>Ivermectin- SARS Cov2 helicase molecular docking: Drug Repurposing</p>
+                <p>03 May 2020</p>
+                <a href="https://osf.io/8dseq/" target="_blank" class="r-btn">More</a>
+            </div>
+            <div class="r-box">
+                <div class="bar"></div>
+                <img src="{% static 'images/manuscript.png' %}">
+                <p>Secondary co-infections in COVID using RNA-sequencing data: Patient genome-data analysis</p>
+                <p>11 April 2020</p>
+                <a href="https://osf.io/s48fv/" target="_blank" class="r-btn">More</a>
+            </div>
+    </div>
+    <div class="r-box-container">
+        <div class="r-box">
+            <div class="bar"></div>
+            <img src="{% static 'images/manuscript.png' %}">
+            <p>Protective role of BCG vaccine in COVID: a hypothesis</p>
+            <p>10 April 2020</p>
+            <a href="https://osf.io/f32pz/" target="_blank" class="r-btn">More</a>
+        </div>
+        <div class="r-box">
+            <div class="bar"></div>
+            <img src="{% static 'images/manuscript.png' %}">
+            <p>Protective role of Vitamin D in COVID: a hypothesis</p>
+            <p>01 May 2020</p>
+            <a href="https://osf.io/dnjav/" target="_blank" class="r-btn">More</a>
+        </div>
+        <div class="r-box">
+            <div class="bar"></div>
+            <img src="{% static 'images/manuscript.png' %}">
+            <p>Repurposing Niclosamide for COVID: suggested mechanisms</p>
+            <p>27 March 2020</p>
+            <a href="https://osf.io/jf3nz/" target="_blank" class="r-btn">More</a>
+        </div>
+</div>
+<div class="r-heading">
+    <h2>Intellectual Property - Patent Applied</h2>
+</div>
+<div class="r-box-container">
+    <div class="r-box">
+        <div class="bar"></div>
+        <img src="{% static 'images/patents.png' %}">
+        <p>Unique-regions SARS Cov2  sequencing and any infectious/other disease screening (Provisional Patent Application Number - 202021023223; miBiome)</p>
+    </div>
+    <div class="r-box">
+        <div class="bar"></div>
+        <img src="{% static 'images/patents.png' %}">
+        <p>Low-cost NGS for SARS Cov2 and any infectious/other disease screening (Provisional Patent Application Number - 202041030440; University of Hyderabad & miBiome)</p>
+    </div>
+</div>
+</section>
+<!--
+<div class="research-wrapper">
+    <div class="content">
+        <div class="heading">In Print</div>
+        <div class="row justify-content-center">
+            <div class="research-card col-md-5">
+                <div class="description">Springer Nature: Microbiome diagnostics and interventions in health and disease</div>
+                <div class="timestamp">2021</div>
+            </div>
+        </div>
+        <div class="heading">Manuscripts in Revision</div>
+        <div class="row justify-content-center">
+            <div class="research-card col-md-5">
+                <div class="description">Drug Repurposing for ExoN of SARS Cov2</div>
+                <div class="timestamp">24 June 2020</div>
+                <div class="external-link">
+                    <a href="https://osf.io/preprints/7x5ek/" target="_blank">Read More...</a>
+                </div>
+            </div>
+        </div>
+        <div class="heading">Preprints</div>
+        <div class="row justify-content-between">
+            <div class="research-card col-md-5">
+                <div class="description">Ribavirin-SARS Cov2 RNA-dependent RNA polymerase docking: Drug Repurposing</div>
+                <div class="timestamp">22 March 2020</div>
+                <div class="external-link">
+                    <a href="https://osf.io/ax98f/" target="_blank">Read More...</a>
+                </div>
+            </div>
+            <div class="research-card col-md-5">
+                <div class="description">Ivermectin- SARS Cov2 helicase molecular docking: Drug Repurposing</div>
+                <div class="timestamp">03 May 2020</div>
+                <div class="external-link">
+                    <a href="https://osf.io/8dseq/" target="_blank">Read More...</a>
+                </div>
+            </div>
+            <div class="research-card col-md-5">
+                <div class="description">Secondary co-infections in COVID using RNA-sequencing data: Patient genome-data analysis</div>
+                <div class="timestamp">11 April 2020</div>
+                <div class="external-link">
+                    <a href="https://osf.io/s48fv/" target="_blank">Read More...</a>
+                </div>
+            </div>
+            <div class="research-card col-md-5">
+                <div class="description">Protective role of BCG vaccine in COVID: a hypothesis</div>
+                <div class="timestamp">10 April 2020</div>
+                <div class="external-link">
+                    <a href="https://osf.io/f32pz/" target="_blank">Read More...</a>
+                </div>
+            </div>
+            <div class="research-card col-md-5">
+                <div class="description">Protective role of Vitamin D in COVID: a hypothesis</div>
+                <div class="timestamp">01 May 2020</div>
+                <div class="external-link">
+                    <a href="https://osf.io/dnjav/" target="_blank">Read More...</a>
+                </div>
+            </div>
+            <div class="research-card col-md-5">
+                <div class="description">Repurposing Niclosamide for COVID: suggested mechanisms</div>
+                <div class="timestamp">27 March 2020</div>
+                <div class="external-link">
+                    <a href="https://osf.io/jf3nz/" target="_blank">Read More...</a>
+                </div>
+            </div>
+        </div>
+        <div class="heading">Intellectual Property - Patent Applied</div>
+        <div class="row justify-content-between">
+            <div class="research-card col-md-5">
+                <div class="description">Unique-regions SARS Cov2  sequencing and any infectious/other disease screening (Provisional Patent Application Number - 202021023223; miBiome)</div>
+            </div>
+            <div class="research-card col-md-5">
+                <div class="description">Low-cost NGS for SARS Cov2 and any infectious/other disease screening (Provisional Patent Application Number - 202041030440; University of Hyderabad & miBiome)</div>
+            </div>
+        </div>
+    </div>
+</div>-->
+{% endblock main_content %}

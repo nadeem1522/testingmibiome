@@ -1,0 +1,138 @@
+{% extends '../flash_base.html' %}
+
+{% load static %}
+
+{% block title %}
+Sign Up
+{% endblock title %}
+
+{% block custom_css %}
+<link rel="stylesheet" href="{% static 'css/user/signup.css' %}">
+{% endblock custom_css %}
+
+{% block main_content %}
+<div class="signup-wrapper">
+    <div class="content">
+        <div class="info-holder">
+            <div class="info-section">
+                <div class="title">Unlock your success</div>
+                <div class="description">Open your door to success with the help of miBiome Therapeutics</div>
+            </div>
+            <div class="image-holder">
+                <img src="{% static 'images/signup.svg' %}" alt="Sign up">
+            </div>
+        </div>
+        <div class="form-holder">
+            <form id="signup-form">
+                <div class="title">Sign Up</div>
+                {% csrf_token %}
+                <div style="display: flex; flex-direction: row; justify-content: space-between; width: 100%;">
+                    <div class="input-block" style="width: 20%">
+                        <select name="title" id="title" required>
+                            <option value="">Select</option>
+                            <option value="Mr.">Mr.</option>
+                            <option value="Mrs.">Mrs.</option>
+                            <option value="Ms.">Ms.</option>
+                            <option value="Dr.">Dr.</option>
+                            <option value="Prof.">Prof.</option>
+                        </select>
+                        <span class="placeholder">Title</span>
+                    </div>
+                    <div class="input-block" style="width: 35%">
+                        <input type="text" id="first-name" name="first_name" required pattern="[A-Za-z]+" title="Only alphabets allowed" maxlength="100">
+                        <span class="placeholder">First Name</span>
+                    </div>
+                    <div class="input-block" style="width: 35%">
+                        <input type="text" id="last-name" name="last_name" required pattern="[A-Za-z]+" title="Only alphabets allowed" maxlength="100">
+                        <span class="placeholder">Last Name</span>
+                    </div>
+                </div>
+                <div class="input-block">
+                    <input type="text" id="affiliation" name="affiliation" required pattern="[A-Za-z ]+" title="Only alphabets allowed" maxlength="500">
+                    <span class="placeholder">Affiliation</span>
+                </div>
+                <div class="input-block">
+                    <input type="text" id="designation" name="designation" required pattern="[A-Za-z ]+" title="Only alphabets allowed" maxlength="500">
+                    <span class="placeholder">Designation</span>
+                </div>
+                <div class="input-block">
+                    <select name="industry" id="industry" required>
+                        <option value="">Please select one</option>
+                        <option value="Academia">Academia</option>
+                        <option value="Biotech Company">Biotech Company</option>
+                        <option value="Clinicians">Clinicians</option>
+                        <option value="Consumer Company">Consumer Company</option>
+                        <option value="Diagnostic Laboratory">Diagnostic Laboratory</option>
+                        <option value="Genomics Company">Genomics Company</option>
+                        <option value="Hospitals">Hospitals</option>
+                        <option value="Pharmaceutical Company">Pharmaceutical Company</option>
+                    </select>
+                    <span class="placeholder">Industry</span>
+                </div>
+                <div class="input-block">
+                    <input type="text" id="phone" name="phone" required maxlength="10" minlength="10" pattern="\d*" title="Only numbers allowed">
+                    <span class="placeholder">Phone Number</span>
+                </div>
+                <div class="input-block">
+                    <input type="email" id="email" name="email" required maxlength="254">
+                    <span class="placeholder">Email</span>
+                </div>
+                <div style="display: flex; flex-direction: row; justify-content: space-between; width: 100%;">
+                    <div class="input-block" style="width: 47%">
+                        <input type="password" id="password" name="password" required>
+                        <span class="placeholder">Password</span>
+                    </div>
+                    <div class="input-block" style="width: 47%">
+                        <input type="password" id="confirm-password" name="password2" required>
+                        <span class="placeholder">Confirm Password</span>
+                    </div>
+                </div>
+                <div class="spinner-border text-danger mb-2" role="status" style="display: none;">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+                <button class="primary-button">Sign Up</button>
+            </form>
+            <div class="login-area">
+                <div class="highlight-text">Do you an account?</div>
+                <a href="{% url 'user:login' %}"><button type="button" class="primary-flat-button">Login</button></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal" tabindex="-1" id="error-modal">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Error</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="primary-flat-button" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal" tabindex="-1" id="success-modal">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Success</h5>
+            </div>
+            <div class="modal-body">
+                <div>Your account is successfully created. Please Login to go ahead.</div>
+            </div>
+            <div class="modal-footer">
+                <a href="{% url 'user:login' %}"><button type="button" class="primary-button">Log In</button></a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock main_content %}
+
+{% block custom_script %}
+<script src="{% static 'js/user/signup.js' %}"></script>
+{% endblock custom_script %}

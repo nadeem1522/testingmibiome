@@ -1,0 +1,232 @@
+.about-wrapper {
+  width: 70%;
+  margin: auto;
+  padding: 1.25rem 0rem;
+}
+
+.about-wrapper .content .section1 {
+  padding-bottom: 10vh;
+}
+
+.about-wrapper .content .heading {
+  font-weight: 700;
+  font-size: 2.5rem;
+  word-spacing: 0.13rem;
+  text-align: center;
+  margin-bottom: 1.88rem;
+  letter-spacing: 0.06rem;
+  font-family: Poppins;
+}
+
+.about-wrapper .content .heading:after {
+  display: block;
+  height: 0.13rem;
+  background-color: #3498db;
+  content: " ";
+  width: 6.25rem;
+  margin: 0 auto;
+  margin-top: 1.25rem;
+}
+
+.about-wrapper .content .section1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-wrapper .content .section1 .paragraph {
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: #000;
+  font-family: TTCommons;
+}
+
+.about-wrapper .content .team-section .sub-heading {
+  font-size: 2rem;
+  text-align: center;
+  padding-bottom: 0.7rem;
+}
+
+.about-wrapper .content .team-section .col-lg-4 {
+  height: inherit;
+  margin-bottom: 2rem;
+}
+
+.about-wrapper .content .team-section .member-card {
+  width: 100%;
+  border-radius: 5px;
+  background-color: rgba(220, 220, 220, 0.4);
+  height: 100%;
+}
+
+.about-wrapper .content .team-section .member-card .display-section {
+  height: 100%;
+}
+
+.about-wrapper .content .team-section .member-card img {
+  width: 100%;
+  height: 19rem;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.about-wrapper .content .team-section .member-card .details {
+  padding: 1rem;
+  height: 30%;
+}
+
+.about-wrapper .content .team-section .member-card .details .name {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.about-wrapper .content .team-section .member-card .details .position {
+  font-weight: 300;
+  font-size: 1.2rem;
+}
+
+.about-wrapper .content .team-section .member-card .details .social {
+  font-size: 1.5rem;
+  line-height: 100%;
+}
+
+@media screen and (max-width: 1024px) {
+  .about-wrapper {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .about-wrapper .content .team-section .member-card {
+    width: 70%;
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .about-wrapper .content .team-section .member-card {
+    width: 100%;
+  }
+}
+
+.timeline {
+  position: relative;
+  margin: 50px auto;
+  padding: 40px 0;
+  width: 1000px;
+  box-sizing: border-box;
+}
+
+.timeline:before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  width: 2px;
+  height: 100%;
+  background: #c5c5c5;
+}
+
+.timeline ul {
+  margin: 0;
+  padding: 0;
+}
+
+.timeline ul li {
+  list-style: none;
+  position: relative;
+  width: 50%;
+  padding: 20px 40px;
+  margin-bottom: 35px;
+  box-sizing: border-box;
+  box-shadow: 0 10px 20px rgb(6 72 212 / 8%);
+}
+
+.timeline ul li:nth-child(odd) {
+  float: left;
+  text-align: right;
+  clear: both;
+}
+
+.timeline ul li:nth-child(even) {
+  float: right;
+  text-align: left;
+  clear: both;
+}
+
+.timeline .content {
+  padding-bottom: 20px;
+}
+
+.timeline ul li:nth-child(odd)::before {
+  content: '';
+  position: absolute;
+  top: 56px;
+  right: -6px;
+  width: 10px;
+  height: 10px;
+  background: rgba(52,152,219,1);
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px rgba(52,152,219,0.2);
+}
+
+.timeline ul li:nth-child(even)::before {
+  content: '';
+  position: absolute;
+  top: 56px;
+  left: -4px;
+  width: 10px;
+  height: 10px;
+  background: rgba(52,152,219,1);
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px rgba(52,152,219,0.2);
+}
+
+.timeline ul li h3 {
+  margin: 0;
+  padding: 0;
+  font-weight: 600;
+  color: rgba(52,152,219,1); 
+  font-family: Poppins;
+}
+
+.timeline ul li p {
+  margin: 10px 0 0;
+  padding: 0;
+  font-weight: 300;
+  color: #000;
+  font-size: 1.2rem;
+  font-family: TTCommons;
+}
+
+.timeline ul li .time h4 {
+  margin: 0;
+  padding: 0;
+  font-size: 0.94rem;
+  font-family: TTCommons;
+  font-weight: 300;
+}
+
+.timeline ul li:nth-child(odd) .time {
+  position: absolute;
+  top: 46px;
+  right: -165px;
+  margin: 0;
+  padding: 8px 16px;
+  background: rgba(52,152,219, 1);
+  color: #fff;
+  border-radius: 18px;
+  box-shadow: 0 0 0 3px rgba(52,152,219, 0.3);
+}
+
+.timeline ul li:nth-child(even) .time {
+  position: absolute;
+  top: 46px;
+  left: -165px;
+  margin: 0;
+  padding: 8px 6px;
+  background: rgba(52,152,219, 1);
+  color: #fff;
+  border-radius: 18px;
+  box-shadow: 0 0 0 3px rgba(52,152,219, 0.3);
+}

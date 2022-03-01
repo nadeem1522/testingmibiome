@@ -1,0 +1,113 @@
+@font-face {
+    font-family: TTCommons;
+    font-style: normal;
+    font-weight: normal;
+    src: local('TTCommons'), 
+    url("/static/fonts/TT_Commons/Regular.64f3f9984474.ttf");
+}
+
+@font-face {
+    font-family: TTCommons;
+    font-style: normal;
+    font-weight: 300;
+    src: local('TTCommons'), 
+    url("/static/fonts/TT_Commons/Light.263de624d1be.ttf");
+}
+
+html, body, .page-wrapper, .main-wrapper {
+    height: 100%;
+    font-family: TTCommons;
+    line-height: 100%;
+}
+
+.page-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #ef476f;
+    background-color: white;
+}
+
+.navbar-brand {
+    margin-left: 1rem;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-weight: 300;
+    font-size: 1.1rem;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link.active {
+    color: #ef476f;
+}
+
+.primary-button {
+    background-color: #ef476f;
+    color: white;
+    padding: 0.7rem 2rem;
+    border: none;
+    border-radius: 2rem;
+    font-size: 1.1rem;
+    width: max-content;
+}
+
+.primary-button:focus {
+    outline: none;
+}
+
+.primary-flat-button {
+    color: #ef476f;
+    background-color: transparent;
+    border: none;
+    border-radius: 2rem;
+    font-size: 1.1rem;
+}
+
+.primary-flat-button:focus {
+    outline: none;
+}
+
+.error {
+    color: #cf000f;
+}
+
+.success {
+    color: #009944;
+}
+
+.background {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    z-index: -100;
+}
+
+#helix-primary {
+    position: fixed;
+    height: 160%;
+    transform: rotate(-15deg);
+    top: -30%;
+    left: -15%;
+}
+
+#helix-gradient {
+    position: fixed;
+    height: 90%;
+    transform: rotate(45deg);
+    right: -5%;
+    bottom: -30%;
+}
+
+@media screen and (max-width: 1024px) {
+    #helix-gradient {
+        display: none;
+    }
+}

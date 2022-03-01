@@ -1,0 +1,22 @@
+{% extends '../base.html' %}
+
+{% load static %}
+
+{% block title %}
+Internal Server Error
+{% endblock title %}
+
+{% block custom_css %}
+<link rel="stylesheet" href="{% static 'css/index/500.css' %}">
+{% endblock custom_css %}
+
+{% block main_content %}
+<div class="error-wrapper">
+    <div class="content">
+        <div class="image">
+            <img src="{% static 'images/500.svg' %}" alt="500 Error">
+        </div>
+        <div class="title-text">Opps... Something went wrong</div>
+    </div>
+</div>
+{% endblock main_content %}

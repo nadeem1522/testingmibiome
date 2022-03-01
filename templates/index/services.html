@@ -1,0 +1,131 @@
+{% extends '../base.html' %}
+
+{% load static %}
+
+{% block title %}
+Services
+{% endblock title %}
+
+{% block custom_css %}
+<link rel="stylesheet" href="{% static 'css/index/services.css' %}">
+{% endblock custom_css %}
+
+{% block main_content %}
+<div class="section" id="what-we-do">
+  <div class="section-title"><h2>What we do</h2></div>
+    <div class="accordion accordion-flush" style="max-width: 800px;margin: 0 auto;" id="accordionFlushExample">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingOne">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+            DNA Based 
+          </button>
+        </h2>
+        <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">
+            <img src="{% static 'images/dna.png' %}">
+            <p>Whole Genome Sequencing</p>
+            <p>Whole & Clinical Exome</p>
+            <p>Viral Genome Sequencing</p>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingTwo">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+              RNA Based 
+          </button>
+        </h2>
+        <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">
+            <img src="{% static 'images/rna.png' %}">
+            <p>Whole Transcriptome Analysis</p>
+            <p>Small RNA Sequencing</p>
+            <p>Long non-coding RNA Sequencing</p>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingThree">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+            Metagenomics
+          </button>
+        </h2>
+        <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">
+            <img src="{% static 'images/metagenomics.png' %}">
+            <p>Shotgun Metagenomics</p>
+            <p>Shotgun Metatranscriptomics</p>
+            <p>16S/18S rDNA/rRNA Sequencing</p>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingOne">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+            Epigenetics 
+          </button>
+        </h2>
+        <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">
+            <img src="{% static 'images/epigenetics.png' %}">
+            <p>Whole Genome Bi-sulfite Sequencing</p>
+            <p>MeDIP-Seq</p>
+            <p>ChIP-Seq</p>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingOne">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+            Computation 
+          </button>
+        </h2>
+        <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">
+            <img src="{% static 'images/computation.png' %}">
+            <p>De Novo Assembly of Novel Genomes</p>
+            <p>Drug Repurposing</p>
+            <p>Bioinformatics Analysis</p>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+
+<div class="technology-wrapper">
+    <div class="page-heading"><h2>Technology we use</h2></div>
+    <div class="content">
+        <div class="tech-row">
+            <div class="image-wrapper">
+                <img src="{% static 'images/illumina.jpg' %}" alt="Illumina NGS">
+            </div>
+            <div class="information">
+                <div class="title">Illumina NGS</div>
+                <div class="description">Access focused applications such as targeted resequencing, metagenomics, small genome sequencing, targeted gene expression profiling, and more. MiSeq reagents enable up to 15 Gb of output with 25 million sequencing reads and 2 × 300 bp read lengths.</div>
+            </div>
+        </div>
+        <div class="tech-row reverse">
+            <div class="image-wrapper">
+                <img src="{% static 'images/nanopore.jpeg' %}" alt="Nanopore">
+            </div>
+            <div class="information">
+                <div class="title">Oxford Nanopore NGS</div>
+                <div class="description">Oxford Nanopore has developed a new generation of DNA/RNA sequencing technology. It is the only sequencing technology that offers real-time analysis (for rapid insights), in fully scalable formats from pocket to population scale, that can analyse native DNA or RNA and sequence any length of fragment to achieve short to ultra-long read lengths.</div>
+            </div>
+        </div>
+        <div class="tech-row">
+            <div class="image-wrapper">
+                <img src="{% static 'images/thermo.webp' %}" alt="Thermo Real Time PCR">
+            </div>
+            <div class="information">
+                <div class="title">Thermo Real Time PCR</div>
+                <div class="description">This instrument is a simple, reliable, and affordable real-time PCR system that doesn’t require compromise on performance or quality. This system offers a sensitive, robust solution for forensic DNA quantification. With maximum dye versatility, this HID solution offers accurate, trusted results in a small benchtop footprint.</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock main_content %}
+{% block custom_script %}
+<script src="{% static 'js/index/services.js' %}"></script>
+{% endblock custom_script %}

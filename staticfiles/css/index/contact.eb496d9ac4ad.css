@@ -1,0 +1,104 @@
+.contact-wrapper {
+    width: 80%;
+    margin: auto;
+    padding: 4rem 0rem;
+}
+
+.contact-wrapper .page-heading {
+    font-size: 3rem;
+    font-weight: 300;
+    display: flex;
+    justify-content: center;
+}
+
+.contact-wrapper .content .contact-section {
+    display: flex;
+    flex-direction: row;
+}
+
+.contact-wrapper .content .contact-section .details {
+    width: 50%;
+    padding: 1rem;
+}
+
+.contact-wrapper .content .contact-section .details .title {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.contact-wrapper .content .contact-section .details .content {
+    font-weight: 300;
+    padding-bottom: 2rem;
+}
+
+.contact-wrapper .content .contact-section .details .content a {
+    color: #0648d4;
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+
+.contact-wrapper .content .contact-section .details .content .map-wrapper {
+    width: 100%;
+}
+
+.contact-wrapper .content .contact-section .details .social-plugins a {
+    margin-right: 1.5rem;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.contact-wrapper .content .contact-section .form {
+    width: 50%;
+}
+
+.contact-wrapper .content .contact-section .form form {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.contact-wrapper .content .contact-section .form input, .contact-section .form input:focus {
+    height: 2rem;
+    border-radius: 3px;
+    font-weight: 300;
+    padding: 0.3rem;
+    width: 100%;
+    margin: 1rem 0rem;
+}
+
+.contact-wrapper .content .contact-section .form textarea, .contact-wrapper .content .contact-section .form textarea:focus {
+    border-radius: 3px;
+    font-weight: 300;
+    padding: 0.3rem;
+    width: 100%;
+    margin: 1rem 0rem;
+}
+
+.contact-wrapper .content .contact-section .form input, .contact-section .form textarea {
+    border: 0.5px solid #acacac;
+}
+
+.contact-wrapper .content .contact-section .form input:focus, .contact-wrapper .content .contact-section .form textarea:focus {
+    border: 0.5px solid #0648d4;
+    outline: none;
+}
+
+@media screen and (max-width: 768px) {
+    .contact-wrapper {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .contact-wrapper .content .contact-section {
+        flex-direction: column-reverse;
+    }
+
+    .contact-wrapper .content .contact-section .details {
+        width: 100%;
+    }
+
+    .contact-wrapper .content .contact-section .form {
+        width: 100%;
+    }
+}

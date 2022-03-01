@@ -1,0 +1,65 @@
+.technology-wrapper {
+    padding: 4rem 0rem;
+    margin: auto;
+    width: 80%;
+}
+
+.technology-wrapper .page-heading {
+    font-size: 3rem;
+    font-weight: 300;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 1rem;
+}
+
+.technology-wrapper .content .tech-row {
+    display: flex;
+    padding-bottom: 2rem;
+}
+
+.technology-wrapper .content .reverse {
+    flex-direction: row-reverse;
+}
+
+.technology-wrapper .content .tech-row .image-wrapper {
+    width: 50%;
+}
+
+.technology-wrapper .content .tech-row .image-wrapper img {
+    width: 100%;
+}
+
+.technology-wrapper .content .tech-row .information {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.technology-wrapper .content .tech-row .information .title {
+    font-size: 2rem;
+    font-weight: 600;
+    padding-bottom: 1rem;
+}
+
+.technology-wrapper .content .tech-row .information .description {
+    color: #999999;
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+@media screen and (max-width: 768px) {
+    .technology-wrapper .content .tech-row {
+        flex-direction: column;
+    }
+
+    .technology-wrapper .content .tech-row .image-wrapper {
+        width: 100%;
+        padding-bottom: 1rem;
+    }
+
+    .technology-wrapper .content .tech-row .information {
+        width: 100%;
+    }
+}

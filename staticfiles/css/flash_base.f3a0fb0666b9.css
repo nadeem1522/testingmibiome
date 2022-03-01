@@ -1,0 +1,41 @@
+html, body, .page-wrapper, .main-wrapper {
+    height: 100%;
+}
+
+.page-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.navbar-brand {
+    margin-left: 1rem;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-weight: 300;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link.active {
+    color: #0648d4;
+}
+
+.primary-button, .primary-button:hover {
+    width: 100%;
+    background-color: #0648d4;
+    color: white;
+}
+
+.error {
+    color: red;
+}
+
+.success {
+    color: #0648d4;
+}

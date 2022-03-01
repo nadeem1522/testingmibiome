@@ -1,0 +1,143 @@
+{% extends '../base.html' %}
+
+{% load static %}
+
+{% block custom_css %}
+<link rel="stylesheet" href="{% static 'css/index/home.css' %}">
+{% endblock custom_css %}
+
+{% block main_content %}
+<div class="header">
+    <video autoplay muted loop id="bg-video">
+        
+    </video>
+</div>
+
+<section class="about-us">
+    <div>
+        <div class="row-c">
+            <h2>About Us</h2>
+        </div>
+        <div class="row-c">
+            <div class="about-container">
+                <p class="aboutus-content">
+                    <span>We are an advanced science and deep tech start-up comprising of a passionate group of experienced scientists, doctors, business professionals and young coders.</span>
+                    <br><br>
+                    <span>We share a vision of making genomics-based services available to all by making it cheaper, better and faster.</span>
+                    <br><br>
+                    <span>We are unlocking the power of genomics through deep technology in every sector.</span>
+                    <br><br>
+                    <span>We come to work everyday to facilitate #GenomicsForAll and decode life.</span>
+                </p>
+                <img src="{% static 'images/aboutus.png' %}">
+            </div>
+        </div>
+    </div>
+    <div class="stat" id="stats">
+        <h3>miBiome in Numbers</h3>
+        <div class="content-box">
+            <img class="show-image" src="{% static 'images/count-sec.png' %}" alt="miBiome in numbers">
+            <div class="text-center">
+                <div class="stat-items">
+                    <i class="fas fa-database"></i>
+                    <h1><span class="counter">700</span></h1>
+                    <p>Data Generated (in GB)</p>
+                </div>
+                <div class="stat-items">
+                    <i class="fas fa-flask"></i>
+                    <h1><span class="counter">500</span></h1>
+                    <p>Samples Processed</p>
+                </div>
+                <div class="stat-items">
+                    <i class="fas fa-tasks"></i>
+                    <h1><span class="counter">20</span></h1>
+                    <p>Successful Projects</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<section class="services">
+    <div class="s-heading">
+        <h2>What we do</h2>
+    </div>
+    <div class="s-box-container">
+        <div class="s-box">
+            <div class="bar"></div>
+            <img src="{% static 'images/dnareading.png' %}" alt="1">
+            <h1>DNA <br>Reading</h1>
+            <p>Our team of Next-Generation Sequencing (NGS) experts are always there to sequence DNA to understand life, disease, environment and more.</p>
+            <a href="#" class="s-btn">More</a>
+        </div>
+        <div class="s-box">
+            <div class="bar"></div>
+            <img src="{% static 'images/computationalanalytics.png' %}" alt="1">
+            <h1>Computational <br>Analytics</h1>
+            <p>'Data is the new oil' : Clive Humby (Mathematician)<br>We use high-end computation software and hardware to get the most out of biological data.</p>
+            <a href="#" class="s-btn">More</a>
+        </div>
+        <div class="s-box">
+            <div class="bar"></div>
+            <img src="{% static 'images/scientificconsulting.png' %}" alt="1">
+            <h1>Scientific <br>Consulting</h1>
+            <p>Our team of highly qualified PhD experts can help navigate your sequencing journey.</p>
+            <a href="#" class="s-btn">More</a>
+        </div>
+    </div>
+</section>
+
+
+
+<section class="testimonials">
+    <h2>What they say</h2>
+
+    <div class="content-box">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="profile">
+                    <img src="{% static 'images/logos/vellore.png' %}" style="width: 6rem;">
+                    <blockquote>miBiome team is highly professional in understanding our scientific needs in analyzing the transcriptomics data. They stick to their prescribed deadlines and are cooperative in solving our concerns related to understanding and presenting the analyzed data to the scientific community. My good wishes for the team to grow big in this omics field.</blockquote>
+                    <h3>Dr. E. Nalini</h3>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="profile">
+                    <img src="{% static 'images/logos/RGCB.png' %}" style="width: 6rem;">
+                    <blockquote>We had a great experience working with miBiome. We have performed whole-genome and RNA-seq projects involving mycobacterial samples (both NGS and bioinformatic analysis). The miBiome team was very professional and kept us up to date with the progress of the workflow from sample pickup to final results.</blockquote>
+                    <h3>Dr. Krishna Kurthkoti</h3>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="profile">
+                    <img src="{% static 'images/logos/iiser_logo.png' %}" style="height: 7.3rem;">
+                    <blockquote>Working with miBiome has been very helpful to us. The greatest advantage to work with miBiome is the customizability of our needs. Some of the sequencing needs were not regular exome or genome sequencing and many service companies in India declined to perform them. However, miBiome listened to us and the sequencing is in progress.</blockquote>
+                    <h3>Dr. N. Sadananda Singh</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% comment %} <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 5">
+    <div id="flash-sale-toast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true" data-bs-autohide="false">
+        <div class="toast-header">
+            <i class="fas fa-bolt me-2" style="color: yellow;"></i>
+            <strong class="me-auto">Flash sale</strong>
+            <small>11 mins ago</small>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body">
+            Get 25 Gb processing at ₹12,500 only. Limited period.
+        </div>
+    </div>
+</div> {% endcomment %}
+{% endblock main_content %}
+
+{% block custom_script %}
+<script src="{% static 'js/index/home.js' %}"></script>
+<script src="{% static 'vendor/counterup.min.js' %}"></script>
+<script src="{% static 'vendor/waypoints.js' %}"></script>
+{% endblock custom_script %}

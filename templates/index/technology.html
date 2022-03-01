@@ -1,0 +1,46 @@
+{% extends '../base.html' %}
+
+{% load static %}
+
+{% block title %}
+Technology
+{% endblock title %}
+
+{% block custom_css %}
+<link rel="stylesheet" href="{% static 'css/index/technology.css' %}">
+{% endblock custom_css %}
+
+{% block main_content %}
+<div class="technology-wrapper">
+    <div class="page-heading">Technology we use</div>
+    <div class="content">
+        <div class="tech-row">
+            <div class="image-wrapper">
+                <img src="{% static 'images/illumina.jpg' %}" alt="Illumina NGS">
+            </div>
+            <div class="information">
+                <div class="title">Illumina NGS</div>
+                <div class="description">Access focused applications such as targeted resequencing, metagenomics, small genome sequencing, targeted gene expression profiling, and more. MiSeq reagents enable up to 15 Gb of output with 25 million sequencing reads and 2 × 300 bp read lengths.</div>
+            </div>
+        </div>
+        <div class="tech-row reverse">
+            <div class="image-wrapper">
+                <img src="{% static 'images/nanopore.jpeg' %}" alt="Nanopore">
+            </div>
+            <div class="information">
+                <div class="title">Oxford Nanopore NGS</div>
+                <div class="description">Oxford Nanopore has developed a new generation of DNA/RNA sequencing technology. It is the only sequencing technology that offers real-time analysis (for rapid insights), in fully scalable formats from pocket to population scale, that can analyse native DNA or RNA and sequence any length of fragment to achieve short to ultra-long read lengths.</div>
+            </div>
+        </div>
+        <div class="tech-row">
+            <div class="image-wrapper">
+                <img src="{% static 'images/thermo.webp' %}" alt="Thermo Real Time PCR">
+            </div>
+            <div class="information">
+                <div class="title">Thermo Real Time PCR</div>
+                <div class="description">This instrument is a simple, reliable, and affordable real-time PCR system that doesn’t require compromise on performance or quality. This system offers a sensitive, robust solution for forensic DNA quantification. With maximum dye versatility, this HID solution offers accurate, trusted results in a small benchtop footprint.</div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock main_content %}

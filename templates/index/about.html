@@ -1,0 +1,430 @@
+{% extends '../base.html' %}
+
+{% load static %}
+
+{% block title %}
+About Us
+{% endblock title %}
+
+{% block custom_css %}
+<link rel="stylesheet" href="{% static 'css/index/about.css' %}">
+{% endblock custom_css %}
+
+{% block main_content %}
+<div class="about-wrapper">
+    <div class="content">
+        <div class="section1">
+            <div class="heading">Who we are</div>
+            <div class="paragraph">
+                We are an advanced science and deep tech start-up comprising of a passionate group of experienced scientists, doctors, business professionals and young coders. We share a vision of making genomics-based services available to all by making it cheaper, better and faster. We are unlocking the power of genomics through deep technology in every sector. We come to work everyday to facilitate #GenomicsForAll and decode life.
+            </div>
+        </div>
+        <div class="section1">
+            <div class="heading">Our Vision</div>
+            <div class="paragraph">Empowering healthcare and science through the power of genomics</div>
+        </div>
+        <div class="team-section">
+            <div class="heading">The Team</div>
+            <div class="sub-heading">Leadership</div>
+            <div class="row justify-content-center">
+                <div class="col-lg-4 col-md-7">
+                    <div class="member-card">
+                        <div class="display-section">
+                            <img src="{% static 'images/team/Ravi.jpg' %}" alt="Ravi Shroff">
+                            <div class="details">
+                                <div class="name">Ravi <span style="font-weight: 300;">Shroff</span></div>
+                                <div class="position">Co-Founder & Managing Partner</div>
+                                <div class="social">
+                                    <a href="https://www.linkedin.com/in/ravi-shroff-0926a31/" target="_blank">
+                                        <i class="fab fa-linkedin" style="color: #0e76a8;"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-7">
+                    <div class="member-card">
+                        <div>
+                            <img src="{% static 'images/team/Gautam.jpg' %}" alt="Dr. Gautam Das">
+                            <div class="details">
+                                <div class="name">Dr. Gautam <span style="font-weight: 300;">Das</span></div>
+                                <div class="position">Co-Founder & Managing Partner</div>
+                                <div class="social">
+                                    <a href="https://www.linkedin.com/in/dr-gautam-das-ph-d-005441b/" target="_blank">
+                                        <i class="fab fa-linkedin" style="color: #0e76a8;"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-7">
+                    <div class="member-card">
+                        <div>
+                            <img src="{% static 'images/team/Nandini.jpg' %}" alt="Dr. Nandini Das Gupta">
+                            <div class="details">
+                                <div class="name">Dr. Nandini <span style="font-weight: 300;">Dasgupta</span></div>
+                                <div class="position">Head, Science Team</div>
+                                <div class="social">
+                                    <a href="https://www.linkedin.com/in/nandini-dasgupta-397a258/" target="_blank">
+                                        <i class="fab fa-linkedin" style="color: #0e76a8;"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sub-heading">Scientists</div>
+            <div class="row justify-content-center">
+                <div class="col-lg-4 col-md-7">
+                    <div class="member-card">
+                        <div>
+                            <img src="{% static 'images/team/Alka.jpg' %}" alt="Dr. Alka Srivastava">
+                            <div class="details">
+                                <div class="name">Dr. Alka <span style="font-weight: 300;">Srivastava</span></div>
+                                <div class="position">Senior Computational Biologist</div>
+                                <div class="social">
+                                    <a href="https://www.linkedin.com/in/dr-alka-srivastava-594baa95/" target="_blank">
+                                        <i class="fab fa-linkedin" style="color: #0e76a8;"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-7">
+                    <div class="member-card">
+                        <div>
+                            <img src="{% static 'images/team/Amrita.jpeg' %}" alt="Amrita Rao">
+                            <div class="details">
+                                <div class="name">Amrita <span style="font-weight: 300;">Rao</span></div>
+                                <div class="position">Clinical NGS Specialist</div>
+                                <div class="social">
+                                    <a href="https://www.linkedin.com/in/amrita-rao-81588427/" target="_blank">
+                                        <i class="fab fa-linkedin" style="color: #0e76a8;"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-7">
+                    <div class="member-card">
+                        <div>
+                            <img src="{% static 'images/team/Vrishali.jpg' %}" alt="Vrishali Murugkar">
+                            <div class="details">
+                                <div class="name">Vrishali <span style="font-weight: 300;">Murugkar</span></div>
+                                <div class="position">Microbiologist & Nanopore NGS Specialist</div>
+                                <div class="social">
+                                    <a href="https://www.linkedin.com/in/vrishali-murugkar-aa555465/" target="_blank">
+                                        <i class="fab fa-linkedin" style="color: #0e76a8;"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-7">
+                    <div class="member-card">
+                        <div>
+                            <img src="{% static 'images/team/Chandrasekhar.jpg' %}" alt="Arigela Chandrasekhar">
+                            <div class="details">
+                                <div class="name">Arigela <span style="font-weight: 300;">Chandrasekhar</span></div>
+                                <div class="position">NGS & RTPCR Specialist</div>
+                                <div class="social">
+                                    <a href="https://www.linkedin.com/in/chandrasekhar-arigela-966b21a0/" target="_blank">
+                                        <i class="fab fa-linkedin" style="color: #0e76a8;"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-7">
+                    <div class="member-card">
+                        <div>
+                            <img src="{% static 'images/team/Shradha.jpg' %}" alt="Dr. Shradha Khater">
+                            <div class="details">
+                                <div class="name">Dr. Shradha <span style="font-weight: 300;">Khater</span></div>
+                                <div class="position">Sr. Microbiome Scientist</div>
+                                <div class="social">
+                                    <a href="https://www.linkedin.com/in/shradha-khater-54b74489/" target="_blank">
+                                        <i class="fab fa-linkedin" style="color: #0e76a8;"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sub-heading">Coders</div>
+            <div class="row justify-content-center">
+                <div class="col-lg-4 col-md-7">
+                    <div class="member-card">
+                        <div>
+                            <img src="{% static 'images/team/Akib.jpeg' %}" alt="Akib Kamani">
+                            <div class="details">
+                                <div class="name">Akib <span style="font-weight: 300;">Kamani</span></div>
+                                <div class="position">Bio-Software Developer</div>
+                                <div class="social">
+                                    <a href="https://www.linkedin.com/in/akibkamani/" target="_blank">
+                                        <i class="fab fa-linkedin" style="color: #0e76a8;"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-7">
+                    <div class="member-card">
+                        <div>
+                            <img src="{% static 'images/team/Sahil.jpg' %}" alt="Sahil Vora">
+                            <div class="details">
+                                <div class="name">Sahil <span style="font-weight: 300;">Vora</span></div>
+                                <div class="position">Full Stack Developer</div>
+                                <div class="social">
+                                    <a href="https://www.linkedin.com/in/sahil-vora-089079172/" target="_blank">
+                                        <i class="fab fa-linkedin" style="color: #0e76a8;"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sub-heading">Business & Sales</div>
+            <div class="row justify-content-center">
+                <div class="col-lg-4 col-md-7">
+                    <div class="member-card">
+                        <div>
+                            <img src="{% static 'images/team/Sachin.png' %}" alt="Sachin Parikh">
+                            <div class="details">
+                                <div class="name">Sachin <span style="font-weight: 300;">Parikh</span></div>
+                                <div class="position">Business Strategist</div>
+                                <div class="social">
+                                    <a href="https://www.linkedin.com/in/sachin-parikh-118a3114/" target="_blank">
+                                        <i class="fab fa-linkedin" style="color: #0e76a8;"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-7">
+                    <div class="member-card">
+                        <div>
+                            <img src="{% static 'images/team/Javed.jpg' %}" alt="Mohammad Javed" style="object-fit: cover;">
+                            <div class="details">
+                                <div class="name">Mohammad <span style="font-weight: 300;">Javed</span></div>
+                                <div class="position">Head – Sales</div>
+                                <div class="social">
+                                    <a href="https://www.linkedin.com/in/mohammad-javed-6984041b/" target="_blank">
+                                        <i class="fab fa-linkedin" style="color: #0e76a8;"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section3">
+            <div class="heading">Our Story</div>
+            <div class="container-fluid">
+                <div class="row">
+                    <div id="timeline">
+                        <div class="row timeline-movement">
+                            <div class="timeline-badge center-left"></div>
+                            <div class="col-md-7 timeline-item">
+                                <div class="row">
+                                    <div class="col-sm-11">
+                                        <div class="timeline-panel credits  anim animate fadeInLeft">
+                                            <ul class="timeline-panel-ul">
+                                                <div class="righting-wrap">
+                                                    <li class="title">The Big Bang</li>
+                                                    <li class="description">A co-incidental meeting over a dinner between an industrialist and a scientist, who later become Founders</li>
+                                                    <li class="date">23 May 2015</li>
+                                                </div>
+                                                <div class="clear"></div>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row timeline-movement">
+                            <div class="timeline-badge center-right"></div>
+                            <div class="offset-sm-6 col-md-7  timeline-item">
+                                <div class="row">
+                                    <div class="offset-sm-1 col-sm-11">
+                                        <div class="timeline-panel debits  anim animate  fadeInRight">
+                                            <ul class="timeline-panel-ul">
+                                                <div class="righting-wrap">
+                                                    <li class="title">First Sunrise</li>
+                                                    <li class="description">Formation of miBiome Therapeutics start-up with a mission to democratize #GenomicsForAll</li>
+                                                    <li class="date">14 October 2019</li>
+                                                </div>
+                                                <div class="clear"></div>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row timeline-movement">
+                            <div class="timeline-badge center-left"></div>
+                            <div class="col-md-7 timeline-item">
+                                <div class="row">
+                                    <div class="col-sm-11">
+                                        <div class="timeline-panel credits  anim animate fadeInLeft">
+                                            <ul class="timeline-panel-ul">
+                                                <div class="righting-wrap">
+                                                    <li class="title">The Day we Settled</li>
+                                                    <li class="description">A state-of-the-art Next-Generation Sequencing laboratory in the heart of Mumbai</li>
+                                                    <li class="date">6 August 2020</li>
+                                                </div>
+                                                <div class="clear"></div>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row timeline-movement">
+                            <div class="timeline-badge center-right"></div>
+                            <div class="offset-sm-6 col-md-7  timeline-item">
+                                <div class="row">
+                                    <div class="offset-sm-1 col-sm-11">
+                                        <div class="timeline-panel debits  anim animate  fadeInRight">
+                                            <ul class="timeline-panel-ul">
+                                                <div class="righting-wrap">
+                                                    <li class="title">When our civilization flourished</li>
+                                                    <li class="description">We grew to an experienced team of 12 people from top institutions globally</li>
+                                                    <li class="date">25 December 2020</li>
+                                                </div>
+                                                <div class="clear"></div>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row timeline-movement">
+                            <div class="timeline-badge center-left"></div>
+                            <div class="col-md-7 timeline-item">
+                                <div class="row">
+                                    <div class="col-sm-11">
+                                        <div class="timeline-panel credits  anim animate fadeInLeft">
+                                            <ul class="timeline-panel-ul">
+                                                <div class="righting-wrap">
+                                                    <li class="title">The Evolution</li>
+                                                    <li class="description">Multiple Innovative products in development</li>
+                                                    <li class="date">January 2021</li>
+                                                </div>
+                                                <div class="clear"></div>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="row timeline-movement">
+                            <div class="timeline-badge center-right"></div>
+                            <div class="offset-sm-6 col-md-7  timeline-item">
+                                <div class="row">
+                                    <div class="offset-sm-1 col-sm-11">
+                                        <div class="timeline-panel debits  anim animate  fadeInRight">
+                                            <ul class="timeline-panel-ul">
+                                                <div class="righting-wrap">
+                                                    <li class="title">Our First Harvest</li>
+                                                    <li class="description">700 GB of genomic data generated and 500 samples processed</li>
+                                                    <li class="date">March 2021</li>
+                                                </div>
+                                                <div class="clear"></div>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% comment %} <div class="section3">
+            <div class="heading">Our Story</div>
+            <div class="timeline">
+                <ul>
+                    <li>
+                        <div class="content">
+                            <h3>The Big Bang</h3>
+                            <p>A co-incidental meeting over a dinner between an industrialist and a scientist, who later become Founders</p>
+                        </div>
+                        <div class="time">
+                            <h4>23rd May, 2015</h4>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="content">
+                            <h3>First Sunrise</h3>
+                            <p>Formation of miBiome Therapeutics start-up with a mission to democratize #GenomicsForAll</p>
+                        </div>
+                        <div class="time">
+                            <h4>14th October, 2019</h4>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="content">
+                            <h3>The Day we Settled</h3>
+                            <p>A state-of-the-art Next-Generation Sequencing laboratory in the heart of Mumbai</p>
+                        </div>
+                        <div class="time">
+                            <h4>6th August, 2020</h4>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="content">
+                            <h3>When our civilization flourished</h3>
+                            <p>We grew to an experienced team of 12 people from top institutions globally</p>
+                        </div>
+                        <div class="time">
+                            <h4>25th December, 2020</h4>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="content">
+                            <h3>The Evolution</h3>
+                            <p>Multiple Innovative products in development</p>
+                        </div>
+                        <div class="time">
+                            <h4>January, 2021</h4>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="content">
+                            <h3>Our First Harvest</h3>
+                            <p>700 GB of genomic data generated and 500 samples processed</p>
+                        </div>
+                        <div class="time">
+                            <h4>March, 2021</h4>
+                        </div>
+                    </li>
+                    <div style="clear: both;"></div>
+                </ul>
+            </div>
+        </div> {% endcomment %}
+    </div>
+</div>
+{% endblock main_content %}
+
+{% block custom_script %}
+<script src="{% static 'js/index/about.js' %}"></script>
+{% endblock custom_script %}

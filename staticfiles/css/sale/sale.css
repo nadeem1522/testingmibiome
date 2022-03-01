@@ -1,0 +1,371 @@
+.sale-section {
+    width: 80%;
+    margin: auto;
+    height: 100%;
+}
+
+.sale-section .content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.sale-section .content .timer {
+    height: max-content;
+    width: 100%;
+}
+
+.sale-section .content .wrap {
+    position: relative;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    margin: auto;
+    height: 10rem;
+}
+
+.sale-section .content .timer .title {  
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: #ef476f;
+    font-size: 2rem;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.sale-section .content .timer .countdown {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.sale-section .content .timer .countdown .bloc-time {
+    float: left;    
+    margin-right: 1.5rem;
+    text-align: center;
+}
+
+.sale-section .content .timer .countdown .bloc-time:last-child {
+    margin-right: 0;
+}
+
+.sale-section .content .timer .countdown .count-title {
+    display: block;
+    margin-bottom: 15px;
+    font: normal 0.94em TTCommons;
+    color: #1a1a1a;
+    text-transform: uppercase;
+}
+
+.sale-section .content .timer .countdown .figure {
+    position: relative;
+    float: left;
+    height: 5rem;
+    width: 5rem;
+    margin-right: 10px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 3px 4px 0 rgb(0 0 0 / 20%), inset 2px 4px 0 0 rgb(255 255 255 / 8%);
+    vertical-align: baseline;
+}
+
+.sale-section .content .timer .countdown .figure:last-child {
+    margin-right: 0;
+}
+
+.sale-section .content .timer .countdown .figure > span {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    font: normal 4em TTCommons;
+    line-height: 150%;
+    font-weight: 700;
+    color: #de4848;
+}
+
+.sale-section .content .timer .countdown .figure .top {
+    z-index: 3;
+    background-color: #f7f7f7;
+    transform-origin: 50% 100%;
+    -webkit-transform-origin: 50% 100%; 
+    -moz-border-radius-topleft: 10px;
+    -webkit-border-top-left-radius: 10px;
+    border-top-left-radius: 10px;
+    -moz-border-radius-topright: 10px;
+    -webkit-border-top-right-radius: 10px;
+    border-top-right-radius: 10px;
+    -moz-transform: perspective(200px);
+    -ms-transform: perspective(200px);
+    -webkit-transform: perspective(200px);
+    transform: perspective(200px);
+}
+
+.sale-section .content .timer .countdown .figure .top::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+}
+
+.sale-section .content .timer .countdown .figure .top {
+    height: 50%;
+    overflow: hidden;
+    -moz-backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.sale-section .content .timer .countdown .figure .top-back {
+    height: 50%;
+    overflow: hidden;
+    backface-visibility: hidden;
+}
+
+.sale-section .content .timer .countdown .figure .top-back {
+    z-index: 4;
+    bottom: 0;
+    background-color: #fff;
+    -webkit-transform-origin: 50% 0;
+    transform-origin: 50% 0;
+    transform: perspective(200px) rotateX(180deg);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.sale-section .content .timer .countdown .figure .top-back span {
+    position: absolute;
+    top: -100%;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.sale-section .content .timer .countdown .figure span.bottom-back::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+}
+
+.sale-section .content .timer .countdown .figure .bottom {  
+    z-index: 1;
+}
+
+.sale-section .content .timer .countdown .figure .bottom::before {
+    content: "";
+    position: absolute;
+    display: block; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+}
+
+.sale-section .content .timer .countdown .figure .bottom-back {
+    z-index: 2;
+    top: 0;
+    height: 50%;
+    overflow: hidden;    
+    background-color: #f7f7f7;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+  
+.sale-section .content .timer .countdown .figure .bottom-back span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.sale-section .content .main-arena {
+    margin-top: 4rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.sale-section .content .main-arena .info-section {
+    width: 55%;
+}
+
+.sale-section .content .main-arena .info-section .title {
+    color: #ef476f;
+    font-size: 2.5rem;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    line-height: 110%;
+    padding-bottom: 0.5rem;
+    text-align: center;
+}
+
+.sale-section .content .main-arena .info-section .description {
+    font-size: 1.2rem;
+    font-weight: 300;
+    text-align: center;
+    padding-bottom: 1.5rem;
+}
+
+.sale-section .content .main-arena .info-section .info-row {
+    display: flex;
+    padding-bottom: 1rem;
+}
+
+.sale-section .content .main-arena .info-section .info-row .heading {
+    color: #ef476f;
+    font-size: 1.3rem;
+    margin-right: 0.5rem;
+    line-height: 100%;
+}
+
+.sale-section .content .main-arena .info-section .info-row .desc {
+    font-size: 1.3rem;
+    font-weight: 300;
+    line-height: 100%;
+    text-align: justify;
+}
+
+.sale-section .content .main-arena .form-section {
+    width: 40%;
+}
+
+.sale-section .content .main-arena form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sale-section .content .main-arena form .title {
+    color: #ef476f;
+    font-size: 2.5rem;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    line-height: 110%;
+    padding-bottom: 1rem;
+    text-align: center;
+}
+
+.sale-section .content .main-arena .input-block {
+    position: relative;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.sale-section .content .main-arena .input-block input {
+    font-weight: normal;
+    color: black;
+    width: 100%;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    border: 1px solid #acacac;
+    outline:none;
+}
+
+.sale-section .content .main-arena .input-block span.placeholder {
+    position: absolute;
+    margin: 0.7rem 0rem;
+    color:  #acacac;
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    top: 0;
+    left: 1rem;
+    transition: all 0.2s;
+    transform-origin: 0% 0%;
+    background: none;
+    pointer-events: none;
+}
+
+.sale-section .content .main-arena .input-block input:valid + span.placeholder,
+.sale-section .content .main-arena .input-block input:focus + span.placeholder {
+    transform: scale(0.8) translateY(-1.2rem);
+    background: #fff;
+    padding: 0rem 0.2rem;
+}
+
+.sale-section .content .main-arena .input-block input:focus {
+    color: black;
+    border-color: #ef476f;
+}
+
+.sale-section .content .main-arena .input-block input:focus + span.placeholder {
+    color: #ef476f;
+}
+
+.sale-section .content .main-arena .input-block select {
+    font-weight: normal;
+    color: black;
+    width: 100%;
+    padding: 0.7rem 1rem 0.4rem 1rem;
+    border-radius: 5px;
+    border: 1px solid #acacac;
+    outline:none;
+    background-color: white;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 16px 12px;
+    appearance: none;
+}
+
+.sale-section .content .main-arena .input-block select:focus {
+    color: black;
+    border-color: #ef476f;
+}
+
+.sale-section .content .main-arena .input-block select + span.placeholder {
+    position: absolute;
+    color:  #acacac;
+    display: flex;
+    align-items: center;
+    font-size: 0.8rem;
+    top: -1rem;
+    left: 1rem;
+    padding: 0rem 0.2rem;
+    transform-origin: 0% 0%;
+    background: #fff;
+    pointer-events: none;
+}
+
+.sale-section .content .main-arena .input-block select:focus + span.placeholder {
+    color: #ef476f;
+}
+
+.sale-section .content .main-arena .input-block textarea {
+    font-weight: normal;
+    color: black;
+    width: 100%;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    border: 1px solid #acacac;
+    outline:none;
+}
+
+.sale-section .content .main-arena .input-block textarea:valid + span.placeholder,
+.sale-section .content .main-arena .input-block textarea:focus + span.placeholder {
+    transform: scale(0.8) translateY(-1.2rem);
+    background: #fff;
+    padding: 0rem 0.2rem;
+}
+
+.sale-section .content .main-arena .input-block textarea:focus {
+    color: black;
+    border-color: #ef476f;
+}
+
+.sale-section .content .main-arena .input-block textarea:focus + span.placeholder {
+    color: #ef476f;
+}

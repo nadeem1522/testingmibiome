@@ -1,0 +1,44 @@
+{% load get_item %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Query Form</title>
+    <style>
+        table {
+            width: 80%;
+            margin: auto;
+        }
+        th {
+            text-align: left;
+            padding-bottom: 1rem;
+        }
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        td {
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center">Query Form</h1>
+    <table>
+        <thead>
+            <th style="width: 30%">Question</th>
+            <th style="width: 70%">Response</th>
+        </thead>
+        <tbody>
+            {% for field in form %}
+            <tr>
+                <td style="width: 20%">{{field.label}}</td>
+                <td style="width: 80%">{{form.cleaned_data|get_item:field.name}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

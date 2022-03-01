@@ -1,0 +1,88 @@
+{% load get_item %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample Submission Form</title>
+    <style>
+        table {
+            width: 80%;
+            margin: auto;
+        }
+        th {
+            text-align: left;
+            padding-bottom: 1rem;
+        }
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        td {
+            padding: 10px;
+        }
+        #sample-table {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center">Sample Submission Form</h1>
+    <table>
+        <thead>
+            <th style="width: 30%">Question</th>
+            <th style="width: 70%">Response</th>
+        </thead>
+        <tbody>
+            {% for field in form %}
+            <tr>
+                <td style="width: 20%">{{field.label}}</td>
+                <td style="width: 80%">{{form.cleaned_data|get_item:field.name}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <br>
+    <br>
+    <h1 style="text-align: center">Sample Information Details</h1>
+    <table id="sample-table">
+        <thead>
+            <th>Serial Number</th>
+            <th>Sample Labelled On Tube</th>
+            <th>Species</th>
+            <th>Source</th>
+            <th>Qubit /Nanodrop Concentration（ng/µl)</th>
+            <th>Total Volume (µl)</th>
+            <th>Total amount (µg)</th>
+            <th>OD 260/280 (Nanodrop)</th>
+            <th>OD 260/230 (Nanodrop)</th>
+            <th>Library Type/Sample For</th>
+            <th>Barcode</th>
+            <th>PCR Product Size</th>
+            <th>GB/Sample</th>
+            <th>Remark</th>
+        </thead>
+        <tbody>
+            {% for sample in samples %}
+            <tr>
+                <td>{{forloop.counter}}</td>
+                <td>{{sample.sample_labelled}}</td>
+                <td>{{sample.species}}</td>
+                <td>{{sample.source}}</td>
+                <td>{{sample.qubit}}</td>
+                <td>{{sample.total_volume}}</td>
+                <td>{{sample.total_amount}}</td>
+                <td>{{sample.od_280}}</td>
+                <td>{{sample.od_230}}</td>
+                <td>{{sample.library_type}}</td>
+                <td>{{sample.barcode}}</td>
+                <td>{{sample.pcr_product_size}}</td>
+                <td>{{sample.gb_sample}}</td>
+                <td>{{sample.remark}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

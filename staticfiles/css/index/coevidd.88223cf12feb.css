@@ -1,0 +1,95 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.coevidd {
+  margin-top: 1.25rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.coevidd h2 {
+  font-weight: 700;
+  font-size: 2.5rem;
+  word-spacing: 0.13rem;
+  text-align: center;
+  margin-bottom: 1.88rem;
+  letter-spacing: 0.06rem;
+  font-family: Poppins;
+}
+
+.coevidd h2:after {
+  display: block;
+  height: 0.13rem;
+  background-color: #3498db;
+  content: " ";
+  width: 6.25rem;
+  margin: 0 auto;
+  margin-top: 1.25rem;
+}
+
+.coevidd .row {
+  width: 70%;
+  margin: auto;
+}
+
+.coevidd .row .col-md-6 {
+  height: inherit;
+  margin-bottom: 1rem;
+}
+
+.service {
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  padding: 1.25rem;
+  box-sizing: border-box;
+  cursor: pointer;
+  transition: 0.4s;
+  box-shadow: 0 0 1.25rem 0.06rem rgba(0, 0, 0, 0.1);
+}
+
+.service:hover {
+  background: #ddd;
+}
+
+.service img {
+  color: #3498db;
+  height: 3.13rem;
+  width: 3.13rem;
+  margin-bottom: 1.88rem;
+}
+
+.service h2 {
+  font-size: 1.63rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin: 0;
+  font-family: TTCommons;
+}
+
+.service h2:after {
+  display: block;
+  height: 0.13rem;
+  background-color: #3498db;
+  content: " ";
+  width: 6.25rem;
+  margin: 0 auto;
+  margin-top: 0.63rem;
+  margin-bottom: 0.94rem;
+}
+
+.service p {
+  color: #000;
+  font-family: TTCommons;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+@media screen and (max-width: 768px) {
+  .coevidd .row {
+    width: 80%;
+    margin: auto;
+  }
+}

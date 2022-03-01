@@ -1,0 +1,144 @@
+.genomics {
+    margin-top: 1.25rem;
+    margin-bottom: 3.13rem;
+}
+
+.genomics h2 {
+    font-weight: 700;
+    font-size: 2.5rem;
+    word-spacing: 0.13rem;
+    text-align: center;
+    margin-bottom: 1.88rem;
+    letter-spacing: 0.06rem;
+    font-family: Poppins;
+}
+
+.genomics h2:after {
+    display: block;
+    height: 0.13rem;
+    background-color: #3498db;
+    content: " ";
+    width: 6.25rem;
+    margin: 0 auto;
+    margin-top: 1.25rem;
+}
+
+.main {
+    width: 100%;
+    min-height: 380px;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+    margin-top: 18.75rem;
+}
+
+.main-2 {
+    width: 100%;
+    min-height: 380px;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+    margin-top: 20.13rem;
+}
+
+.service {
+    background: #FFF;
+    padding: 1.88rem;
+    border-radius: 0.63rem;
+    position: absolute;
+    bottom: 0;
+    height: 38.75rem;
+    z-index: 1;
+    box-shadow: 0 0 1.25rem -0.94rem #3498db;
+    transition: transform .8s;
+}
+
+.service-logo {
+    width: 8.13rem;
+    height: 8.13rem;
+    border-radius: 50%;
+    margin: -5.63rem auto 0;
+    background: #FFFAFA;
+    border: 0.5rem solid white;
+}
+
+.service-logo img {
+    width: 3.13rem;
+    margin-top: 2.81rem;
+    justify-content: center;
+    text-align: center;
+    transition: transform 1s;
+}
+
+.service h4 {
+    height: 3.13rem;
+    width: 80%;
+    background: #Fff;
+    margin: 1.25rem auto;
+    position: relative;
+    font-family: TTCommons;
+    font-weight: 500;
+    font-size: 2.5rem;
+    text-align: center;
+    border-bottom: 0.13rem solid #3498db;
+}
+
+.service p {
+    font-family: TTCommons;
+    font-size: 1.13rem;
+    font-weight: 300;
+    color: #000;
+}
+
+
+/*.shadowOne {
+    height: 12.5rem;
+    width: 64%;
+    background: #FFF;
+    position: absolute;
+    border-radius: 0.63rem;
+    bottom: 0;
+    left: 18%;
+    z-index: -2;
+    box-shadow: 0 0 1.25rem -0.94rem #3498db;
+    transition: transform .8s;
+}
+
+.shadowTwo {
+    height: 12.5rem;
+    width: 64%;
+    background: #FFF;
+    position: absolute;
+    border-radius: 0.63rem;
+    bottom: 0;
+    left: 18%;
+    z-index: -2;
+}
+
+.main:hover .service {
+    transform: translateY(-3.13rem);
+}
+
+.main:hover .shadowOne {
+    transform: translateY(-1.56rem);
+}
+
+.main:hover img {
+    transform: rotate(360deg);
+}
+
+.main-2:hover .service {
+    transform: translateY(-3.13rem);
+}
+
+.main-2:hover .shadowOne {
+    transform: translateY(-1.56rem);
+}
+
+.main-2:hover img {
+    transform: rotate(360deg);
+}
+
+.genomics .row-2 {
+    margin-top: 1rem;
+}*/

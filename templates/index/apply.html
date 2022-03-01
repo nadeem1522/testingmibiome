@@ -1,0 +1,86 @@
+{% extends '../base.html' %}
+
+{% load static %}
+
+{% block title %}
+Careers
+{% endblock title %}
+
+{% block custom_css %}
+<link rel="stylesheet" href="{% static 'css/index/apply.css' %}">
+{% endblock custom_css %}
+
+{% block main_content %}
+
+<div class="apply-container">
+  <div class="form">
+    <div class="apply-info">
+      <h3 class="title">Apply as an Intern</h3>
+      <p class="text">
+          We welcome interns with science and engineering education to participate in our genomics and computation journey.
+      </p>
+      <div class="info">
+          <p>Streams:</p>
+        <div class="information">
+          <i class="far fa-circle"></i>
+          <div>Science</div>
+        </div>
+        <div class="information">
+          <i class="far fa-circle"></i>
+          <div>Technology</div>
+        </div>
+        <div class="information">
+          <i class="far fa-circle"></i>
+          <div>Marketing</div>
+        </div> 
+      </div>
+    </div>
+    <div class="form-holder">
+      <form id="intern-form">
+        {% csrf_token %}
+        <h3 class="title">Intern Form</h3>
+        <div class="input-container">
+          <input type="text" name="name" class="input" required>
+          <label for="">Full Name</label>
+          <span>Full Name</span>
+        </div>
+        <div class="input-container">
+          <input type="email" name="email" class="input" required>
+          <label for="">Email</label>
+          <span>Email</span>
+        </div>
+        <div class="input-container">
+          <input type="text" name="phone" class="input" pattern="\d*" title="Only numbers allowed" minlength="7" maxlength="15" required>
+          <label for="">Phone</label>
+          <span>Phone</span>
+        </div>
+        <div class="input-container">
+          <input type="text" name="education" class="input" required>
+          <label for="">Education</label>
+          <span>Education</span>
+        </div>
+        <div class="input-container">
+          <input type="text" name="stream" class="input" required>
+          <label for="">Stream</label>
+          <span>Stream</span>
+        </div>
+        <div class="input-container">
+          <input type="text" name="duration" class="input" required>
+          <label for="">Duration</label>
+          <span>Duration</span>
+        </div>
+        <div class="file-container">
+          <label for="resume">Resume</label>
+          <input type="file" class="input" name="resume" id="resume" required >
+        </div>
+        <div id="intern-message"></div>
+        <input type="submit" value="Send" class="btn" />
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock main_content %}
+
+{% block custom_script %}
+<script src="{% static 'js/index/apply.js' %}"></script>
+{% endblock custom_script %}

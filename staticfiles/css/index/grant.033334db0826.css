@@ -1,0 +1,122 @@
+.grant-section {
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
+}
+
+.grant-section h2 {
+    font-size: 2.5rem;
+    color: #000;
+    text-align: center;
+    font-weight: 700;
+    font-family: Poppins;
+}
+
+.grant-section h2:after {
+    display: block;
+    height: 0.13rem;
+    background-color: #3498db;
+    content: " ";
+    width: 12.5rem;
+    margin: 0 auto;
+    margin-top: 1.25rem;
+    margin-bottom: 0.63rem;
+}
+
+.grant-section .grant-heading .grant-tagline {
+    font-style: italic;
+    font-family: Poppins;
+    width: 70%;
+    margin: auto;
+    text-align: right;
+}
+
+.grant-img {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.grant-img img {
+    width: 40%;
+}
+
+.grant-section .step {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    margin: auto;
+    margin-top: 3rem;
+    box-shadow: 0 0 1.88rem 0.06rem rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    border-radius: 0.63rem;
+}
+
+.grant-section .step .title {
+    margin-top: 2rem;
+    margin-bottom: 1.2rem;
+    display: flex;
+}
+
+.grant-section .step .title img {
+    height: 3.13rem;
+    width: 3.13rem;
+    margin-right: 1rem;
+}
+
+.grant-section .step .title h2 {
+    text-align: center;
+    margin-top: 0.5rem;
+    font-family: Poppins;
+    font-weight: 500;
+    font-size: 1.88rem;
+}
+
+.grant-section .step .title h2:after {
+    display: block;
+    height: 0.13rem;
+    background-color: #3498db;
+    content: " ";
+    width: 12.5rem;
+    margin: 0 auto;
+    margin-top: 1.25rem;
+    margin-bottom: 0rem;
+}
+
+.grant-section .step .desc {
+    color: #000;
+    font-family: TTCommons;
+    font-weight: 300;
+    font-size: 1.25rem;
+    text-align: justify;
+    padding: 0.5rem 1rem;
+}
+
+.grant-section .please-note {
+    width: 80%;
+    background-color: #3498db; 
+    padding: 20px; 
+    border-radius: 20px; 
+    font-family: TTCommons; 
+    font-weight: 300; 
+    color: #000; 
+    font-size: 20px;
+    margin: auto;
+    margin-top: 3.13rem;
+}
+
+@media screen and (max-width: 541px) {
+    .grant-img img {
+        width: 90%;
+    }
+
+    .grant-section .step {
+        width: 90%;
+    }
+
+    .grant-section .grant-heading .grant-tagline {
+        width: 90%;
+    }
+}

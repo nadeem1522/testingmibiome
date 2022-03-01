@@ -1,0 +1,74 @@
+.genomics {
+    padding-top: 1.25rem;
+    width: 90%;
+    margin: auto;
+}
+
+.genomics h2 {
+    font-weight: 700;
+    font-size: 2.5rem;
+    word-spacing: 0.13rem;
+    text-align: center;
+    margin-bottom: 5rem;
+    letter-spacing: 0.06rem;
+    font-family: Poppins;
+}
+
+.genomics h2:after {
+    display: block;
+    height: 0.13rem;
+    background-color: #3498db;
+    content: " ";
+    width: 6.25rem;
+    margin: 0 auto;
+    margin-top: 1.25rem;
+}
+
+.service {
+    background: #FFF;
+    padding: 1rem 1.88rem;
+    border-radius: 0.63rem;
+    height: 100%;
+    box-shadow: 0 0 1.25rem -0.94rem #3498db;
+}
+
+.col-lg-4 {
+    height: inherit;
+    margin-bottom: 5rem;
+}
+
+.service-logo {
+    width: 8.13rem;
+    height: 8.13rem;
+    border-radius: 50%;
+    margin: -5.63rem auto 0;
+    background: #FFFAFA;
+    border: 0.5rem solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.service-logo img {
+    width: 3.13rem;
+}
+
+.service h4 {
+    height: 3.13rem;
+    background: #Fff;
+    margin: 1.25rem auto;
+    position: relative;
+    font-family: TTCommons;
+    font-weight: 500;
+    font-size: 2.2rem;
+    text-align: center;
+    border-bottom: 0.13rem solid #3498db;
+}
+
+.service .desc {
+    font-family: TTCommons;
+    font-size: 1.13rem;
+    font-weight: 300;
+    color: #000;
+    text-align: justify;
+}

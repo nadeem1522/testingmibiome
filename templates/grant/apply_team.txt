@@ -1,0 +1,20 @@
+Hello there!
+
+A new application for grant is received. Following are the details of applicant and project:
+
+Applicant Details:
+Name: {{name}}
+Email ID: {{email}}
+phone: {{phone}}
+Affiliation: {{affiliation}}
+Designation: {{designation}}
+Industry: {{industry}}
+
+Project Details:
+Project Title: {{title}}
+Description: {{description}}
+Nature of experiment: {{nature_of_experiment}}
+DNA source: {{dna_source}}
+DNA source Others, if applicable: {{dna_source_others}}
+
+Thanks!

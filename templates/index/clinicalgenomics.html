@@ -1,0 +1,93 @@
+{% extends '../base.html' %}
+
+{% load static %}
+
+{% block title %}
+Clinical Genomics
+{% endblock title %}
+
+{% block custom_css %}
+<link rel="stylesheet" href="{% static 'css/index/clinicalgenomics.css' %}">
+{% endblock custom_css %}
+
+{% block main_content %}
+<section class="genomics">
+    <h2>Clinical Genomics</h2>
+    <div class="row">
+        <div class="col-lg-4">
+            <div class="service">
+                <div class="service-logo">
+                    <img src="{% static 'images/projects/infection.png' %}" alt="miInfectionBiome">
+                </div>
+                <h4>miInfectionBiome</h4>
+                <div class="desc">
+                    miInfectionBiome (Infectious Disease Identification) is an unbiased diagnostic assay for identification of micro-organisms present in biological fluids. <br>
+                    As it is culture independent, sub-typing and virulence profiling can be performed alongwith AMR (anti-microbial resistance). The tests detect novel, emergent and re-emergent pathogens. 
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="service">
+                <div class="service-logo">
+                    <img src="{% static 'images/projects/resistant.png' %}" alt="miResistantBiome">
+                </div>
+                <h4>miResistantBiome</h4>
+                <div class="desc">
+                    miResistantBiome (Antibiotic Resistance Determination test) is a sequence based reporting for drug resistance. It determines the presence or absence of established markers for resistance to various drugs. <br>
+                    New panel of resistance markers created in-house through data analytics, AI and ML. Targeted therapy recommended by health care professionals based on report will reduce cost and minimize drug side effects.
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="service">
+                <div class="service-logo">
+                    <img src="{% static 'images/projects/cancer.png' %}" alt="miCancerBiome">
+                </div>
+                <h4>miCancerBiome</h4>
+                <div class="desc">
+                    4,13,519 men and 3,71,302 women lost their lives to cancer in India, in the year 2018. One woman dies of cervical cancer every 8 minutes. For every 2 women newly diagnosed with breast cancer, one woman dies of it. Tobacco alone kills 3500 people everyday. Estimated number of people living with cancer in India is around 2.25 million. <br>
+                    miCancerBiome (Genomic data-based interventions) will help people make better decisions for chemotherapy, surgery, radiation treatment and all targeted therapies. In addition, these tests will also aid in preventing cancer with a strong emphasis on research for India-specific biomarkers
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-4">
+            <div class="service">
+                <div class="service-logo">
+                    <img src="{% static 'images/projects/reproductive.png' %}" alt="miReproductiveBiome">
+                </div>
+                <h4>miReproductiveBiome</h4>
+                <div class="desc">
+                    miReproductiveBiome is focused on research for India-specific markers for reproductive health. Empowering informed choices for fertility and pregnancy is very crucial. 
+                    Studies on genome and microbiome parameters that affect reproductive health and their consequences to child-birth and beyond. New research-based solutions for reproductive health.
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="service">
+                <div class="service-logo">
+                    <img src="{% static 'images/projects/inherited.png' %}" alt="miInheritedBiome">
+                </div>
+                <h4>miInheritedBiome</h4>
+                <div class="desc">
+                    Disease conditions in which the genetic changes are almost exclusively responsible for causing the condition are called genetic disorders, or inherited diseases.<br>
+                    miInheritedBiome focuses on India-specific markers for genetic diseases. Scientists, doctors, genetic counsellors and patients can contribute together to address miInheritedBiome.
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="service">
+                <div class="service-logo">
+                    <img src="{% static 'images/projects/immune.png' %}" alt="miImmuneBiome">
+                </div>
+                <h4>miImmuneBiome</h4>
+                <div class="desc">
+                    miImmuneBiome carries out India-specific HLA typing donor match research and applications. HLA are proteins (or markers) found on most cells in the body. 
+                    The immune system uses these markers to recognize which cells belong to the body and which do not. HLA typing is used in organ transplants like kidney, heart, platelet, liver, lung etc.
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock main_content %}

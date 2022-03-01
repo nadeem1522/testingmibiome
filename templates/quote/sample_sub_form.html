@@ -1,0 +1,751 @@
+{% extends '../base.html' %}
+
+{% load static %}
+{% load beautify %}
+
+{% block title %}
+Sample Submission Form
+{% endblock title %}
+
+{% block custom_css %}
+<link rel="stylesheet" href="{% static 'css/quote/sample_sub_form.css' %}">
+{% endblock custom_css %}
+
+{% block main_content %}
+<div class="form-wrapper">
+    <div class="content">
+        <div class="page-heading">NGS Sample Requirement</div>
+        <div class="highlight-text">All samples will be subject to QC before library preparation. Only high quality of samples will be utilized for the library preparations.</div>
+        <div style="overflow-x: auto; margin-left: 5%; margin-right: 5%">
+            <table id="sample-requirement">
+                <thead>
+                    <th>Service </th>
+                    <th>Service bracket</th>
+                    <th>SAMPLE TYPE</th>
+                    <th>REQUIRED</th>
+                    <th>VOLUME</th>
+                    <th>CONCENTRATION</th>
+                </thead>
+                <tbody>
+                    <tr style="height: 16px">
+                        <td>Whole Genome Sequencing</td>
+                        <td rowspan="5">DNA sequencing</td>
+                        <td>genomic DNA (Human, Animal, Plant &amp; Microbiome)</td>
+                        <td>&gt;2 ug</td>
+                        <td>&gt;20 uls</td>
+                        <td>&gt; 50 ng/ul</td>
+                    </tr>
+                    <tr style="height: 16px">
+                        <td>Whole Exome Sequencing</td>
+                        <td>PCR products</td>
+                        <td>&gt;200 ngs</td>
+                        <td>&gt;20 uls</td>
+                        <td>&gt; 50 ng/ul</td>
+                    </tr>
+                    <tr style="height: 18px">
+                        <td>Genotying by Sequencing</td>
+                        <td>Extracted DNA for Metagenome</td>
+                        <td>&gt;3 ug</td>
+                        <td>&gt;20 uls</td>
+                        <td>&gt; 50 ng/ul</td>
+                    </tr>
+                    <tr style="height: 16px">
+                        <td>de novo sequencing</td>
+                        <td>FFPE extracted DNA</td>
+                        <td>&gt;3ug</td>
+                        <td>&gt;20 uls</td>
+                        <td>&gt; 50 ng/ul</td>
+                    </tr>
+                    <tr style="height: 18px">
+                        <td>Mitochondrial/chloroplast sequencing</td>
+                        <td>Plant/Animal tissues</td>
+                        <td>~ 1 gm</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr style="height: 16px">
+                        <td>Whole Transcriptome Sequencing</td>
+                        <td>RNA Seq</td>
+                        <td>Extracted RNA (Human, Animal &amp; plant)</td>
+                        <td>&gt;2 ug</td>
+                        <td>&gt;20 uls</td>
+                        <td>&gt;50 ng/uls</td>
+                    </tr>
+                    <tr style="height: 16px">
+                        <td>Long non-coding RNA seq</td>
+                        <td></td>
+                        <td>Extracted RNA (Microbial)</td>
+                        <td>&gt;5 ug</td>
+                        <td>&gt;20 uls</td>
+                        <td>&gt;50 ng/uls</td>
+                    </tr>
+                    <tr style="height: 16px">
+                        <td>Small RNA seq</td>
+                        <td></td>
+                        <td>Plant/Animal tissues</td>
+                        <td>~ 1 gm</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr style="height: 16px">
+                        <td>Poly (A)/3&#39; tail seq</td>
+                        <td></td>
+                        <td>Meta</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr style="height: 16px">
+                        <td>Iso-seq/Splicing variants sequencing</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr style="height: 16px">
+                        <td>Whole Genome Bi-sulfite sequencing</td>
+                        <td>Epigenetics</td>
+                        <td class="softmerge">
+                            <div class="softmerge-inner" style="width:305px;left:-1px">Genomic DNA (Human, Animal, Plant &amp;
+                                Microbes) </div>
+                        </td>
+                        <td>&gt;6 ug</td>
+                        <td>&gt; 20 uls</td>
+                        <td>&gt;100 ng/uls</td>
+                    </tr>
+                    <tr style="height: 16px">
+                        <td>Reduced Representation Sequencing</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr style="height: 16px">
+                        <td>MeDIP-seq</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr style="height: 16px">
+                        <td>ATAC-seq</td>
+                        <td></td>
+                        <td>Crosslinked DNA</td>
+                        <td>&gt;4 ug</td>
+                        <td>&gt;20 uls</td>
+                        <td>&gt;150 ng/uls</td>
+                    </tr>
+                    <tr style="height: 16px">
+                        <td>ChIP-Seq</td>
+                        <td></td>
+                        <td>Enriched DNA</td>
+                        <td>&gt;100 ng</td>
+                        <td>&gt;10 ul</td>
+                        <td>&gt;10 ng/ul</td>
+                    </tr>
+                    <tr style="height: 16px">
+                        <td>Shotgun</td>
+                        <td>Metagenomics</td>
+                        <td>genomic DNA</td>
+                        <td>&gt;1 ug</td>
+                        <td>&gt;20 ul</td>
+                        <td>&gt;20ng/ul</td>
+                    </tr>
+                    <tr style="height: 16px">
+                        <td>16S</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr style="height: 16px">
+                        <td>18S</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr style="height: 16px">
+                        <td>ITS </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr style="height: 16px">
+                        <td>16S</td>
+                        <td>Metatranscriptomics</td>
+                        <td>Total RNA</td>
+                        <td>&gt;1 ug</td>
+                        <td>&gt;20 ul</td>
+                        <td>&gt;20ng/ul</td>
+                    </tr>
+                    <tr style="height: 16px">
+                        <td>Coding RNA</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr style="height: 16px">
+                        <td>10X prepared libraries</td>
+                        <td></td>
+                        <td>DNA</td>
+                        <td>&gt;1 ug</td>
+                        <td>&gt;10 uls</td>
+                        <td></td>
+                    </tr>
+                    <tr style="height: 16px">
+                        <td></td>
+                        <td></td>
+                        <td>RNA (cDNA)</td>
+                        <td>&gt; 30 ng</td>
+                        <td>&gt;10 uls</td>
+                        <td></td>
+                    </tr>
+                    <tr style="height: 16px">
+                        <td>10X genomics</td>
+                        <td></td>
+                        <td>Cells</td>
+                        <td class="softmerge">
+                            <div class="softmerge-inner" style="width:106px;left:-1px">&gt;2 million/sample</div>
+                        </td>
+                        <td class="softmerge">
+                            <div class="softmerge-inner" style="width:191px;left:-1px">Snap-frozen</div>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr style="height: 16px">
+                        <td>Ready to Run Library </td>
+                        <td></td>
+                        <td>DNA,RNA</td>
+                        <td class="softmerge">
+                            <div class="softmerge-inner" style="width:182px;left:-1px"> 3ng/ul,10ul for 250-550bp.</div>
+                        </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="page-heading">Sample Submission Form</div>
+        {% if not quote %}
+        <form method="POST">
+            {% for error in list_errors %}
+                <div class="error-message">{{error}}</div>
+            {% endfor %}
+            {% csrf_token %}
+            <input type="hidden" name="post_type" value="request-number">
+            <div class="section-name">Quote Request Number</div>
+            <div class="input-box">
+                <label for="request-number">Request Number<span class="compulsory">*</span></label>
+                <input type="text" class="text-input" name="request_number" id="request-number" required minlength="9" maxlength="9">
+            </div>
+            <div id="request-message"></div>
+            <button type="submit" class="btn primary-button">Submit</button>
+        </form>
+        {% else %}
+        <form method="POST">
+            {% csrf_token %}
+            <input type="hidden" name="post_type" value="sample-submit">
+            <input type="hidden" name="request_number" value="{{quote.unique_id}}">
+            {% if errors %}
+            {% for key, value in errors.items %}
+                <div class="error-message">{{key|beautify}}: {{value.pop.message|capfirst}}</div>
+            {% endfor %}
+            {% endif %}
+            {% for error in list_errors %}
+                <div class="error-message">{{error}}</div>
+            {% endfor %}
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-name">Request Number: {{quote.unique_id}}</div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="section-name">Client and Project Details</div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="input-box">
+                        <label for="company-name">Company / University Name<span class="compulsory">*</span></label>
+                        <input type="text" class="text-input" name="company_name" id="company-name" required value="{{quote.company_name}}">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="input-box">
+                        <label for="requestor-name">Name<span class="compulsory">*</span></label>
+                        <input type="text" class="text-input" name="name" id="requestor-name" required value="{{quote.name}}">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="input-box">
+                        <label for="contact-number">Contact Number<span class="compulsory">*</span></label>
+                        <input type="text" class="text-input" name="contact" id="contact-number" required pattern="\d*" title="Only numbers allowed" minlength="7" maxlength="15" value="{{quote.contact}}">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="input-box">
+                        <label for="email-id">Email ID<span class="compulsory">*</span></label>
+                        <input type="email" class="text-input" name="email" id="email-id" required maxlength="254" value="{{quote.email}}">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="input-box">
+                        <label for="project-name">Project Name<span class="compulsory">*</span></label>
+                        <input type="text" class="text-input" name="project_name" id="project-name" required value="{{quote.project_name}}">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="input-box">
+                        <label for="invoice-add">Invoice Address<span class="compulsory">*</span></label>
+                        <input type="text" class="text-input" name="invoice_address" id="invoice-add" required value="{{quote.address}}">
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="input-box">
+                        <label for="data-delivery-add">Data Delivery Address<span class="compulsory">*</span></label>
+                        <input type="text" class="text-input" name="data_del_add" id="data-delivery-add" required>
+                    </div>
+                    <label class="checkbox-area" for="data-delivery-add-repeat">
+                        <input type="checkbox" id="data-delivery-add-repeat">
+                        Same as invoice address
+                    </label>
+                </div>
+                <div class="col-lg-6">
+                    <div class="input-box">
+                        <label for="sample-ship-date">Sample Shipping Date<span class="compulsory">*</span></label>
+                        <input type="date" class="text-input" name="sample_shipping_date" id="sample-ship-date" required>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="input-box">
+                        <label for="order-date">Order Date<span class="compulsory">*</span></label>
+                        <input type="date" class="text-input" name="order_date" id="order-date" required>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="input-box">
+                        <label for="courier-name">Courier Name<span class="compulsory">*</span></label>
+                        <input type="text" class="text-input" name="courier_name" id="courier-name" required>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="input-box">
+                        <label for="tracking-details">Tracking Details<span class="compulsory">*</span></label>
+                        <input type="text" class="text-input" name="tracking_details" id="tracking-details" required>
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="highlight-text">ALL DNA SAMPLES SHOULD BE DEVOID OF RNA. ALL RNA SAMPLES SHOULD BE DEVOID OF DNA. PLEASE TREAT YOUR SAMPLES WITH RNASE A OR DNASE I ACCORDINGLY AND REPURIFY.</div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="input-box">
+                        <label for="sample-number">Number of Samples/Library<span class="compulsory">*</span></label>
+                        <input type="number" class="text-input" name="sample_number" id="sample-number" required value="{{quote.sample_number}}">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="input-box">
+                        <label for="extraction-method">Method of extraction<span class="compulsory">*</span></label>
+                        <input type="text" class="text-input" name="extraction_method" id="extraction-method" required>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="input-box">
+                        <label>Sample type<span class="compulsory">*</span></label>
+                        <label for="sample-type-dna">
+                            <input type="radio" name="sample_type" id="sample-type-dna" required value="Genomic DNA" {% if 'Genomic DNA' == quote.sample_type %}checked{% endif %}>
+                            Genomic DNA
+                        </label>
+                        <label for="sample-type-meta-dna">
+                            <input type="radio" name="sample_type" id="sample-type-meta-dna" required value="Metagenomic DNA" {% if 'Metagenomic DNA' == quote.sample_type %}checked{% endif %}>
+                            Metagenomic DNA
+                        </label>
+                        <label for="sample-type-enriched-dna">
+                            <input type="radio" name="sample_type" id="sample-type-enriched-dna" required value="Enriched DNA" {% if 'Enriched DNA' == quote.sample_type %}checked{% endif %}>
+                            Enriched DNA
+                        </label>
+                        <label for="sample-type-rna">
+                            <input type="radio" name="sample_type" id="sample-type-rna" required value="Total RNA" {% if 'Total RNA' == quote.sample_type %}checked{% endif %}>
+                            Total RNA
+                        </label>
+                        <label for="sample-type-enriched-rna">
+                            <input type="radio" name="sample_type" id="sample-type-enriched-rna" required value="Enriched RNA" {% if 'Enriched RNA' == quote.sample_type %}checked{% endif %}>
+                            Enriched RNA
+                        </label>
+                        <label for="sample-type-pcr">
+                            <input type="radio" name="sample_type" id="sample-type-pcr" required value="PCR products" {% if 'PCR products' == quote.sample_type %}checked{% endif %}>
+                            PCR products
+                        </label>
+                        <label for="sample-type-tissue">
+                            <input type="radio" name="sample_type" id="sample-type-tissue" required value="Tissue Sample" {% if 'Tissue Sample' == quote.sample_type %}checked{% endif %}>
+                            Tissue Sample
+                        </label>
+                        <label for="sample-type-ffpe">
+                            <input type="radio" name="sample_type" id="sample-type-ffpe" required value="FFPE" {% if 'FFPE' == quote.sample_type %}checked{% endif %}>
+                            FFPE
+                        </label>
+                        <label for="sample-type-stool">
+                            <input type="radio" name="sample_type" id="sample-type-stool" required value="Stool" {% if 'Stool' == quote.sample_type %}checked{% endif %}>
+                            Stool
+                        </label>
+                        <label for="sample-type-swab">
+                            <input type="radio" name="sample_type" id="sample-type-swab" required value="Surface swab" {% if 'Surface swab' == quote.sample_type %}checked{% endif %}>
+                            Surface swab
+                        </label>
+                        <label for="sample-type-soil">
+                            <input type="radio" name="sample_type" id="sample-type-soil" required value="Soil" {% if 'Soil' == quote.sample_type %}checked{% endif %}>
+                            Soil
+                        </label>
+                        <label for="sample-type-water">
+                            <input type="radio" name="sample_type" id="sample-type-water" required value="Water" {% if 'Water' == quote.sample_type %}checked{% endif %}>
+                            Water
+                        </label>
+                        <label for="sample-type-others">
+                            <input type="radio" name="sample_type" id="sample-type-others" required value="Others" {% if 'Others' == quote.sample_type %}checked{% endif %}>
+                            Others
+                        </label>
+                        <input type="text" class="text-input" name="sample_type_specify" placeholder="Please specify" style="margin-top: 0.5rem; display: {% if 'Others' != quote.sample_type %}none{% endif %};" value="{{quote.sample_type_specify|default_if_none:''}}">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="input-box">
+                        <label>Samples In<span class="compulsory">*</span></label>
+                        <label for="samples-in-nuclease">
+                            <input type="radio" name="samples_in" id="samples-in-nuclease" required value="Dissolved in nuclease free water" {% if 'Dissolved in nuclease free water' == quote.samples_in %}checked{% endif %}>
+                            Dissolved in nuclease free water
+                        </label>
+                        <label for="samples-in-te">
+                            <input type="radio" name="samples_in" id="samples-in-te" required value="Dissolved in TE Buffer" {% if 'Dissolved in TE Buffer' == quote.samples_in %}checked{% endif %}>
+                            Dissolved in TE Buffer
+                        </label>
+                        <label for="samples-in-tris">
+                            <input type="radio" name="samples_in" id="samples-in-tris" required value="Dissolved in 10mM Tris-Cl pH 8.0 Buffer" {% if 'Dissolved in 10mM Tris-Cl pH 8.0 Buffer' == quote.samples_in %}checked{% endif %}>
+                            Dissolved in 10mM Tris-Cl pH 8.0 Buffer
+                        </label>
+                        <label for="samples-in-alcohol">
+                            <input type="radio" name="samples_in" id="samples-in-alcohol" required value="Suspended in Alcohol" {% if 'Suspended in Alcohol' == quote.samples_in %}checked{% endif %}>
+                            Suspended in Alcohol
+                        </label>
+                        <label for="samples-in-lyophilized">
+                            <input type="radio" name="samples_in" id="samples-in-lyophilized" required value="Lyophilized" {% if 'Lyophilized' == quote.samples_in %}checked{% endif %}>
+                            Lyophilized
+                        </label>
+                        <label for="samples-in-others">
+                            <input type="radio" name="samples_in" id="samples-in-others" required value="Others" {% if 'Others' == quote.samples_in %}checked{% endif %}>
+                            Others
+                        </label>
+                        <input type="text" class="text-input" name="samples_in_specify" placeholder="Please specify" style="margin-top: 0.5rem; display: {% if 'Others' != quote.samples_in %}none{% endif %};" value="{{quote.samples_in_specify|default_if_none:''}}">
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="highlight-text">To avoid any sample identification error, the sample name in tube must be the same with the sample "Sample Labelled On Tube*" in this form.</div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="highlight-text">Please put in the barcode sequence and PCR product size.</div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="highlight-text">Please share Sample QC report along with Sample Submission form.</div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="section-name">Sample Information</div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="sample-information">
+                        <table id="sample-table">
+                            <thead>
+                                <th>Serial Number</th>
+                                <th>Sample Labelled On Tube<span class="compulsory">*</span></th>
+                                <th>Species<span class="compulsory">*</span></th>
+                                <th>Source<span class="compulsory">*</span></th>
+                                <th>Qubit /Nanodrop Concentration（ng/µl)<span class="compulsory">*</span></th>
+                                <th>Total Volume (µl)</th>
+                                <th>Total amount (µg)</th>
+                                <th>OD 260/280 (Nanodrop)</th>
+                                <th>OD 260/230 (Nanodrop)</th>
+                                <th>Library Type/Sample For<span class="compulsory">*</span></th>
+                                <th>Barcode<span class="compulsory">*</span></th>
+                                <th>PCR Product Size</th>
+                                <th>GB/Sample<span class="compulsory">*</span></th>
+                                <th>Remark</th>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td><input type="text" class="table-input" name="sample_labelled" required></td>
+                                    <td><input type="text" class="table-input" name="species" required></td>
+                                    <td><input type="text" class="table-input" name="source" required></td>
+                                    <td><input type="number" class="table-input" name="qubit" required step="0.01"></td>
+                                    <td><input type="number" class="table-input" name="total_volume" step="0.01"></td>
+                                    <td><input type="number" class="table-input" name="total_amount" step="0.01"></td>
+                                    <td><input type="text" class="table-input" name="od_280"></td>
+                                    <td><input type="text" class="table-input" name="od_230"></td>
+                                    <td><input type="text" class="table-input" name="library_type" required></td>
+                                    <td><input type="text" class="table-input" name="barcode" required></td>
+                                    <td><input type="text" class="table-input" name="pcr_product_size"></td>
+                                    <td><input type="text" class="table-input" name="gb_sample" required></td>
+                                    <td><input type="text" class="table-input" name="remark"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="action-buttons">
+                        <button class="flat-button" type="button" id="add-row">Add row</button>
+                        <button class="flat-button" type="button" id="remove-row">Remove row</button>
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="input-box mt-4">
+                        <label>Platform<span class="compulsory">*</span></label>
+                        <label for="illumina">
+                            <input type="radio" name="ngs_platform" id="illumina" required value="Illumina (Novaseq6000)" {% if 'Illumina (Novaseq6000)' == quote.ngs_platform %}checked{% endif %}>
+                            Illumina (Novaseq6000)
+                        </label>
+                        <label for="illumina-miseq">
+                            <input type="radio" name="ngs_platform" id="illumina-miseq" required value="Illumina (MiSeq)" {% if 'Illumina (MiSeq)' == quote.ngs_platform %}checked{% endif %}>
+                            Illumina (MiSeq)
+                        </label>
+                        <label for="nanopore">
+                            <input type="radio" name="ngs_platform" id="nanopore" required value="Nanopore" {% if 'Nanopore' == quote.ngs_platform %}checked{% endif %}>
+                            Nanopore
+                        </label>
+                        <label for="illumina-nanopore">
+                            <input type="radio" name="ngs_platform" id="illumina-nanopore" required value="Illumina followed by Nanopore" {% if 'Illumina followed by Nanopore' == quote.ngs_platform %}checked{% endif %}>
+                            Illumina followed by Nanopore
+                        </label>
+                        <label for="ion-torrent">
+                            <input type="radio" name="ngs_platform" id="ion-torrent" required value="Ion Torrent" {% if 'Ion Torrent' == quote.ngs_platform %}checked{% endif %}>
+                            Ion Torrent
+                        </label>
+                        <label for="10x">
+                            <input type="radio" name="ngs_platform" id="10x" required value="10X Chromium" {% if '10X Chromium' == quote.ngs_platform %}checked{% endif %}>
+                            10X Chromium
+                        </label>
+                        <label for="pacbio">
+                            <input type="radio" name="ngs_platform" id="pacbio" required value="PacBio" {% if 'PacBio' == quote.ngs_platform %}checked{% endif %}>
+                            PacBio
+                        </label>
+                        <label for="affymetrix">
+                            <input type="radio" name="ngs_platform" id="affymetrix" required value="Affymetrix" {% if 'Affymetrix' == quote.ngs_platform %}checked{% endif %}>
+                            Affymetrix
+                        </label>
+                        <label for="ngs-others">
+                            <input type="radio" name="ngs_platform" id="ngs-others" required value="Others" {% if 'Others' == quote.ngs_platform %}checked{% endif %}>
+                            Others
+                        </label>
+                        <input type="text" class="text-input" name="ngs_specify" placeholder="Please specify" style="margin-top: 0.5rem; display: {% if 'Others' != quote.ngs_platform %}none{% endif %};" value="{{quote.ngs_specify|default_if_none:''}}">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="input-box">
+                        <label>Sequencing Parameters (read length)<span class="compulsory">*</span></label>
+                        <label for="sequencing-single">
+                            <input type="radio" name="sequencing_parameter" id="sequencing-single" required value="Single end: 50" {% if 'Single end: 50' == quote.sequencing_parameter %}checked{% endif %}>
+                            Single end: 50
+                        </label>
+                        <label for="sequencing-double-75">
+                            <input type="radio" name="sequencing_parameter" id="sequencing-double-75" required value="Paired end: 75" {% if 'Paired end: 75' == quote.sequencing_parameter %}checked{% endif %}>
+                            Paired end: 75
+                        </label>
+                        <label for="sequencing-double-150">
+                            <input type="radio" name="sequencing_parameter" id="sequencing-double-150" required value="Paired end: 150" {% if 'Paired end: 150' == quote.sequencing_parameter %}checked{% endif %}>
+                            Paired end: 150
+                        </label>
+                        <label for="sequencing-double-250">
+                            <input type="radio" name="sequencing_parameter" id="sequencing-double-250" required value="Paired end: 250" {% if 'Paired end: 250' == quote.sequencing_parameter %}checked{% endif %}>
+                            Paired end: 250
+                        </label>
+                        <label for="sequencing-double-300">
+                            <input type="radio" name="sequencing_parameter" id="sequencing-double-300" required value="Paired end: 300" {% if 'Paired end: 300' == quote.sequencing_parameter %}checked{% endif %}>
+                            Paired end: 300
+                        </label>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="input-box">
+                        <label for="sequencing-other">Any other sequencing parameter</label>
+                        <input type="text" class="text-input" name="sequencing_other" id="sequencing-other" value="{{quote.sequencing_other|default_if_none:''}}">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="input-box">
+                        <label for="service-choice">Please mention choice of service<span class="compulsory">*</span></label>
+                        <select name="service_choice" id="service-choice" required>
+                            <option value="">---</option>
+                            <option value="DNA Sequencing" {% if 'DNA Sequencing' == quote.service_choice %}selected{% endif %}>DNA Sequencing</option>
+                            <option value="RNA Sequencing" {% if 'RNA Sequencing' == quote.service_choice %}selected{% endif %}>RNA Sequencing</option>
+                            <option value="Epigenetics" {% if 'Epigenetics' == quote.service_choice %}selected{% endif %}>Epigenetics</option>
+                            <option value="Microarray" {% if 'Microarray' == quote.service_choice %}selected{% endif %}>Microarray</option>
+                            <option value="10X" {% if '10X' == quote.service_choice %}selected{% endif %}>10X</option>
+                            <option value="Pacbio" {% if 'Pacbio' == quote.service_choice %}selected{% endif %}>Pacbio</option>
+                            <option value="Metagenomics" {% if 'Metagenomics' == quote.service_choice %}selected{% endif %}>Metagenomics</option>
+                            <option value="Metatranscriptomics" {% if 'Metatranscriptomics' == quote.service_choice %}selected{% endif %}>Metatranscriptomics</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="input-box">
+                        <label for="specific-service">Please select specific service<span class="compulsory">*</span></label>
+                        <select name="specific_service" id="specific-service" required>
+                            <option value="">---</option>
+                            <optgroup label="DNA Sequencing" style="display: {% if 'DNA Sequencing' != quote.service_choice %}none{% endif %};">
+                                <option value="Whole Genome Sequencing" {% if 'Whole Genome Sequencing' == quote.specific_service %}selected{% endif %}>Whole Genome Sequencing</option>
+                                <option value="Whole Exome Sequencing" {% if 'Whole Exome Sequencing' == quote.specific_service %}selected{% endif %}>Whole Exome Sequencing</option>
+                                <option value="Denovo Sequencing" {% if 'Denovo Sequencing' == quote.specific_service %}selected{% endif %}>Denovo Sequencing</option>
+                                <option value="Genotyping-By-Sequencing" {% if 'Genotyping-By-Sequencing' == quote.specific_service %}selected{% endif %}>Genotyping-By-Sequencing</option>
+                            </optgroup>
+                            <optgroup label="RNA Sequencing" style="display: {% if 'RNA Sequencing' != quote.service_choice %}none{% endif %};">
+                                <option value="Whole Transcriptome analysis" {% if 'Whole Transcriptome analysis' == quote.specific_service %}selected{% endif %}>Whole Transcriptome analysis</option>
+                                <option value="Long non-coding RNA" {% if 'Long non-coding RNA' == quote.specific_service %}selected{% endif %}>Long non-coding RNA</option>
+                                <option value="Isoform Sequencing" {% if 'Isoform Sequencing' == quote.specific_service %}selected{% endif %}>Isoform Sequencing</option>
+                            </optgroup>
+                            <optgroup label="Epigenetics" style="display: {% if 'Epigenetics' != quote.service_choice %}none{% endif %};">
+                                <option value="Whole Genome Bi-sulfite Sequencing" {% if 'Whole Genome Bi-sulfite Sequencing' == quote.specific_service %}selected{% endif %}>Whole Genome Bi-sulfite Sequencing</option>
+                                <option value="MeDIP-Seq" {% if 'MeDIP-Seq' == quote.specific_service %}selected{% endif %}>MeDIP-Seq</option>
+                                <option value="ChIP-Seq" {% if 'ChIP-Seq' == quote.specific_service %}selected{% endif %}>ChIP-Seq</option>
+                                <option value="ATAC-Seq" {% if 'ATAC-Seq' == quote.specific_service %}selected{% endif %}>ATAC-Seq</option>
+                            </optgroup>
+                            <optgroup label="Microarray" style="display: {% if 'Microarray' != quote.service_choice %}none{% endif %};">
+                                <option value="Gene Expression" {% if 'Gene Expression' == quote.specific_service %}selected{% endif %}>Gene Expression</option>
+                                <option value="Copy number variation" {% if 'Copy number variation' == quote.specific_service %}selected{% endif %}>Copy number variation</option>
+                                <option value="miRNA profiling" {% if 'miRNA profiling' == quote.specific_service %}selected{% endif %}>miRNA profiling</option>
+                                <option value="Custom" {% if 'Custom' == quote.specific_service %}selected{% endif %}>Custom</option>
+                            </optgroup>
+                            <optgroup label="10X" style="display: {% if '10X' != quote.service_choice %}none{% endif %};">
+                                <option value="Single Cell Genome Sequencing" {% if 'Single Cell Genome Sequencing' == quote.specific_service %}selected{% endif %}>Single Cell Genome Sequencing</option>
+                                <option value="Single Cell ATAC Sequencing" {% if 'Single Cell ATAC Sequencing' == quote.specific_service %}selected{% endif %}>Single Cell ATAC Sequencing</option>
+                                <option value="Single Cell RNA Sequencing" {% if 'Single Cell RNA Sequencing' == quote.specific_service %}selected{% endif %}>Single Cell RNA Sequencing</option>
+                            </optgroup>
+                            <optgroup label="Pacbio" style="display: {% if 'Pacbio' != quote.service_choice %}none{% endif %};">
+                                <option value="Pacbio Genome Sequencing" {% if 'Pacbio Genome Sequencing' == quote.specific_service %}selected{% endif %}>Pacbio Genome Sequencing</option>
+                                <option value="Pacbio Isoseq Sequencing" {% if 'Pacbio Isoseq Sequencing' == quote.specific_service %}selected{% endif %}>Pacbio Isoseq Sequencing</option>
+                            </optgroup>
+                            <optgroup label="Metagenomics" style="display: {% if 'Metagenomics' != quote.service_choice %}none{% endif %};">
+                                <option value="Shotgun Metagenome" {% if 'Shotgun Metagenome' == quote.specific_service %}selected{% endif %}>Shotgun Metagenome</option>
+                                <option value="16S/18S rDNA" {% if '16S/18S rDNA' == quote.specific_service %}selected{% endif %}>16S/18S rDNA</option>
+                                <option value="ITS sequencing" {% if 'ITS sequencing' == quote.specific_service %}selected{% endif %}>ITS sequencing</option>
+                            </optgroup>
+                            <optgroup label="Metatranscriptomics" style="display: {% if 'Metatranscriptomics' != quote.service_choice %}none{% endif %};">
+                                <option value="Enriched for coding RNA" {% if 'Enriched for coding RNA' == quote.specific_service %}selected{% endif %}>Enriched for coding RNA</option>
+                                <option value="16S rRNA" {% if '16S rRNA' == quote.specific_service %}selected{% endif %}>16S rRNA</option>
+                            </optgroup>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="input-box">
+                        <label for="sequencing-depth">Required Sequencing Depth per sample<span class="compulsory">*</span></label>
+                        <select name="sequencing_depth" id="sequencing-depth" required>
+                            <option value="">---</option>
+                            <option value="30X" {% if '30X' == quote.sequencing_depth %}selected{% endif %}>30X</option>
+                            <option value="50X" {% if '50X' == quote.sequencing_depth %}selected{% endif %}>50X</option>
+                            <option value="100X" {% if '100X' == quote.sequencing_depth %}selected{% endif %}>100X</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="input-box">
+                        <label>Expected Data size in Gb per sample<span class="compulsory">*</span></label>
+                        <label for="expected-data-upto-2">
+                            <input type="radio" name="expected_data" id="expected-data-upto-2" required value="Upto 2 Gb" {% if 'Upto 2 Gb' == quote.expected_data %}checked{% endif %}>
+                            Upto 2 Gb
+                        </label>
+                        <label for="expected-data-2-10">
+                            <input type="radio" name="expected_data" id="expected-data-2-10" required value="2-10 Gb" {% if '2-10 Gb' == quote.expected_data %}checked{% endif %}>
+                            2-10 Gb
+                        </label>
+                        <label for="expected-data-10-20">
+                            <input type="radio" name="expected_data" id="expected-data-10-20" required value="10-20 Gb" {% if '10-20 Gb' == quote.expected_data %}checked{% endif %}>
+                            10-20 Gb
+                        </label>
+                        <label for="expected-data-20-100">
+                            <input type="radio" name="expected_data" id="expected-data-20-100" required value="20-100 Gb" {% if '20-100 Gb' == quote.expected_data %}checked{% endif %}>
+                            20-100 Gb
+                        </label>
+                        <label for="expected-data-other">
+                            <input type="radio" name="expected_data" id="expected-data-other" required value="Others" {% if 'Others' == quote.expected_data %}checked{% endif %}>
+                            Others
+                        </label>
+                        <input type="text" class="text-input" name="expected_data_specify" placeholder="Please specify" style="margin-top: 0.5rem; display: {% if 'Others' != quote.expected_data %}none{% endif %};" value="{{quote.expected_data_specify|default_if_none:''}}">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="input-box">
+                        <label for="bioinfo-standard">Bioinformatics Analysis (Standard)</label>
+                        <textarea class="text-input" name="bioinfo_standard" id="bioinfo-standard" rows="3"></textarea>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="input-box">
+                        <label for="bioinfo-additional">Bioinformatics Analysis (Additional)</label>
+                        <textarea class="text-input" name="bioinfo_additional" id="bioinfo-additional" rows="3"></textarea>
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="input-box">
+                        <label for="reference-genome">Reference genome name (if available, which will be utilized for post-sequencing analysis) Reference genome size in bp if any</label>
+                        <input type="text" class="text-input" name="reference_genome" id="reference-genome" value="{{quote.reference_genome|default_if_none:''}}">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="input-box">
+                        <label>Data Delivery method<span class="compulsory">*</span></label>
+                        <label for="data-delivery-hdd">
+                            <input type="radio" name="data_delivery" id="data-delivery-hdd" required value="HDD" {% if 'HDD' == quote.data_delivery %}checked{% endif %}>
+                            HDD
+                        </label>
+                        <label for="data-delivery-server">
+                            <input type="radio" name="data_delivery" id="data-delivery-server" required value="Server" {% if 'Server' == quote.data_delivery %}checked{% endif %}>
+                            Server
+                        </label>
+                        <label for="data-delivery-cloud">
+                            <input type="radio" name="data_delivery" id="data-delivery-cloud" required value="Cloud Storage" {% if 'Cloud Storage' == quote.data_delivery %}checked{% endif %}>
+                            Cloud Storage
+                        </label>
+                        <label for="data-delivery-mibiome">
+                            <input type="radio" name="data_delivery" id="data-delivery-mibiome" required value="Data stored with miBiome">
+                            Data stored with miBiome
+                        </label>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="input-box">
+                        <label>Transportation Details<span class="compulsory">*</span></label>
+                        <label for="transportation-dry">
+                            <input type="radio" name="transportation" id="transportation-dry" required value="Dry Ice">
+                            Dry Ice
+                        </label>
+                        <label for="transportation-pack">
+                            <input type="radio" name="transportation" id="transportation-pack" required value="Cool Pack">
+                            Cool Pack
+                        </label>
+                        <label for="transportation-temperature">
+                            <input type="radio" name="transportation" id="transportation-temperature" required value="Room Temperature">
+                            Room Temperature
+                        </label>
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="input-box">
+                        <label for="comments">Comments</label>
+                        <textarea class="text-input" name="comments" id="comments" rows="3"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div id="sample-message"></div>
+            <button type="submit" class="btn primary-button">Submit</button>
+        </form>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}
+
+{% block custom_script %}
+<script src="{% static 'js/quote/sample_sub_form.js' %}"></script>
+{% endblock custom_script %}

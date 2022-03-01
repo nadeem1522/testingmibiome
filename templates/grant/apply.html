@@ -1,0 +1,111 @@
+{% extends '../flash_base.html' %}
+
+{% load static %}
+
+{% block title %}
+Grant Application
+{% endblock title %}
+
+{% block custom_css %}
+<link rel="stylesheet" href="{% static 'css/grant/apply.css' %}">
+{% endblock custom_css %}
+
+{% block main_content %}
+{% comment %} <div class="apply-section">
+    <div class="content">
+    <div class="title">Apply for Grant</div>
+        <form id="apply-form">
+            {% csrf_token %}
+            <div class="input-block">
+                <input type="text" id="title" name="title" required pattern="[A-Za-z ]+" title="Only alphabets allowed" maxlength="500">
+                <span class="placeholder">Project Title</span>
+            </div>
+            <div class="input-block">
+                <textarea name="description" id="description" rows="3" required></textarea>
+                <span class="placeholder">Description</span>
+            </div>
+            <div class="input-block">
+                <select name="nature_of_experiment" id="nature-of-experiment">
+                    <option value="">Please select one</option>
+                    <option value="Whole Genome Sequencing">Whole Genome Sequencing</option>
+                    <option value="Metagenomics">Metagenomics</option>
+                    <option value="Metatranscriptomics">Metatranscriptomics</option>
+                    <option value="Transcriptomics (RNA Sequencing)">Transcriptomics (RNA Sequencing)</option>
+                    <option value="Whole Exome Sequencing">Whole Exome Sequencing</option>
+                    <option value="Small and long RNA sequencing">Small and long RNA sequencing</option>
+                    <option value="Epigenetics">Epigenetics</option>
+                </select>
+                <span class="placeholder">Nature of experiment</span>
+            </div>
+            <div class="input-block">
+                <select name="dna_source" id="dna-source">
+                    <option value="">Please select one</option>
+                    <option value="Bacteria">Bacteria</option>
+                    <option value="Human">Human</option>
+                    <option value="Animals">Animals</option>
+                    <option value="Plants">Plants</option>
+                    <option value="Others">Others</option>
+                </select>
+                <span class="placeholder">DNA Source</span>
+            </div>
+            <div class="input-block" id="dna-source-others-card" style="display: none;">
+                <input type="text" id="dna-source-others" name="dna_source_others" pattern="[A-Za-z ]+" title="Only alphabets allowed" maxlength="100">
+                <span class="placeholder">If DNA source others, please specify</span>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="Terms and conditions" id="terms-and-conditions" required>
+                <label class="form-check-label" for="terms-and-conditions">
+                    I accept <a href="{% url 'terms' %}">Terms and Conditions</a>
+                </label>
+            </div>
+            <div class="spinner-border text-danger mb-2" role="status" style="display: none;">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+            <button class="primary-button">Submit</button>
+        </form>
+    </div>
+</div>
+
+<div class="modal" tabindex="-1" id="error-modal">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Error</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="primary-flat-button" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal" tabindex="-1" id="success-modal">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Success</h5>
+            </div>
+            <div class="modal-body">
+                <div class="mb-2">Your application is successfully submitted. Our scientists will now evaluate your application and will be in touch with you soon.</div>
+                <div>Thanks!</div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="primary-flat-button" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div> {% endcomment %}
+<div class="application-closed">
+    <div class="message">
+        The winners of first Grant have already been announced
+    </div>
+    <div class="message">But keep watching out for this space!</div>
+</div>
+{% endblock main_content %}
+
+{% comment %} {% block custom_script %}
+<script src="{% static 'js/grant/apply.js' %}"></script>
+{% endblock custom_script %} {% endcomment %}

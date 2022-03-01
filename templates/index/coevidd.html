@@ -1,0 +1,71 @@
+{% extends '../base.html' %}
+
+{% load static %}
+
+{% block title %}
+CoEVIDD
+{% endblock title %}
+
+{% block custom_css %}
+<link rel="stylesheet" href="{% static 'css/index/coevidd.css' %}">
+{% endblock custom_css %}
+
+{% block main_content %}
+<div class="coevidd">
+    <h2>Centre of Excellence in Viral & Infectious <br> Diseases Diagnostics</h2>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="service">
+          <img src="{% static 'images/coevidd.png' %}">
+          <h2>COVID-UNIQSEQ</h2>
+          <p>We have infrastructure to perform Whole Genome Sequencing (WGS) of SARS
+            Cov2, used for genome surveillance. Although being an excellent tool, application of WGS for public
+            health programs can be expensive. </p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="service">
+          <img src="{% static 'images/coevidd.png' %}">
+          <h2>MTB-SEQ</h2>
+          <p>Using Next-Generation Sequencing (NGS), it is now possible to perform identification of
+            Mycobacterium tuberculosis infection in an unprecedented speed. This is significant, considering the
+            large population size of countries where the burden of Tuberculosis (TB) is high.</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="service">
+          <img src="{% static 'images/coevidd.png' %}">
+          <h2>TB-DRUGSEQ</h2>
+          <p>Cultureless NGS method, faster Drug Resistance profiling from sputum, BAL, CSF,
+            ascitic fluid, biopsy or any clinical sample. The early detection of MDR/Pre-XDR/XDR-TB could guide
+            clinicians in the appropriate adjustment of MDR-TB treatment regimen with effective drugs to
+            prevent treatment failure.</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="service">
+          <img src="{% static 'images/coevidd.png' %}">
+          <h2>AMR-SEQ</h2>
+          <p>NGS-based profiling of antimicrobial resistance markers in antibiotic resistant microbes.</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="service">
+          <img src="{% static 'images/coevidd.png' %}">
+          <h2>Sapiens-SEQ</h2>
+          <p>Whole-genome sequencing of human genome (using NGS) and computation analysis
+             to identify variants which can be useful in clinical decision-making (precision medicine), wellness and
+             preventive genetics.</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="service">
+          <img src="{% static 'images/coevidd.png' %}">
+          <h2>miRESPIRATORYBiome</h2>
+          <p>Metagenomic analysis for identification of bacteria and fungi in respiratory
+            samples through NGS.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock main_content %}
